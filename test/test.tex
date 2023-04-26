@@ -1,0 +1,16 @@
+\documentclass[dvipdfmx,uplatex]{jsarticle}
+\usepackage{tree}
+
+\begin{document}
+  \centerline{
+    \ROOT{動物}{
+      \LEAF{神}
+      \BRANCH{哺乳類}{\LEAF{人間}\LEAF{ツキノワグマ}\LEAF{バンドウイルカ}\LEAF{カモノハシ}}
+      \BRANCH{鳥類}{\LEAF{アヒル}\LEAF{ペンギン}}
+      \BRANCH{両生類}{
+        \BRANCH{カエル}{
+          \LEAF{トノサマカエル}\LEAF{ツチガエル}
+        }
+        \LEAF{オオサンショウウオ}\LEAF{アカハライモリ}}
+  }}
+\end{document}

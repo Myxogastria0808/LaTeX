@@ -1,0 +1,92 @@
+\documentclass[dvipdfmx,uplatex]{jsarticle}
+\usepackage{tree}
+\title{確率論第2回演習課題}
+\author{長田悠生}
+\date{2023/4/25}
+
+\begin{document}
+  \begin{titlepage}
+    \maketitle
+    \begin{center}
+      \textmc{\HUGE \LaTeX}
+    \end{center}
+    \thispagestyle{empty}
+  \end{titlepage}
+
+  \centerline{\huge 演習課題2A}
+  \vspace{10mm}
+  \textmc{問題の理解のために、まずツリー構造に直してみる。 \\}
+  \centerline{
+    \ROOT{被験者がコインを投げる}{
+      \BRANCH{コインの裏}{\LEAF{pattern3 被験者が「はい」と答える}}
+      \BRANCH{コインの表}{\LEAF{pattern1 被験者が「はい」と答える}\LEAF{pattern2 被験者が「いいえ」と答える}}
+  }}
+  \textmc{
+    問題文をツリー構造に直すと、結果にはpattern1から3があることがわかった。
+    次に、pattern1から3について、集合A・Bを用いて表す。 \\
+  }
+  \textmc{\large Pattern1}
+  \begin{equation}
+    P(A \cap B)
+  \end{equation}
+  \textmc{\large Pattern2}
+  \begin{equation}
+    P(A^c \cap B)
+  \end{equation}
+  \textmc{\large Pattern3}
+  \begin{equation}
+    P(B^c)
+  \end{equation}
+  \textmc{
+    AとBは互いに独立の関係で、AとBのみでCを表現できる。
+    よって、上図のツリー構造より$P(C)$は、 \\
+  }
+  \begin{equation}
+    P(A \cap B) + P(B^c) = P(C)
+  \end{equation}
+  \textmc{と表せる。\\}
+  \vspace{3mm}
+  \textmc{よって、$P(A)$は、\\}
+  \begin{equation}
+    \frac{1}{2}P(A) + \frac{1}{2} = \frac{55}{100}
+  \end{equation}
+  \begin{equation}
+    P(A) = 0.1
+  \end{equation}
+
+  \newpage
+  \centerline{\huge 演習課題2B}
+  \vspace{10mm}
+  \textmc{事象AとBが独立より、独立の定義から次のことが成り立つ。\\}
+  \begin{equation}
+    P(A \cap B) = P(A)P(B)
+  \end{equation}
+  \textmc{事象Bと事象$B^c$の和集合は、全体集合を表すので、\\}
+  \begin{equation}
+    P(B) + P(B^c) = 1
+  \end{equation}
+  \textmc{また、$P(A \cap B)$と$P(A \cap B^c)$は排反より、\\}
+  \begin{equation}
+    P(A \cap B) + P(A \cap B^c) = P(A)
+  \end{equation}
+  \textmc{上記の3式を利用して、事象Aと事象$B^c$が独立であることを示す。\\}
+  \textmc{以下、事象Aと事象$B^c$が独立であることの証明\\}
+  \begin{equation}
+    P(A \cap B) = P(A) - P(A \cap B^c)
+  \end{equation}
+  \begin{equation}
+    P(B) = 1 - P(B^c)
+  \end{equation}
+  \begin{equation}
+    P(A) - P(A \cap B^c) = \{1 - P(B^c)\}P(A)
+  \end{equation}
+  \begin{equation}
+    P(A) - P(A \cap B^c) = P(A) - P(B^c)P(A)
+  \end{equation}
+  \begin{equation}
+    P(A \cap B^c) = P(B^c)P(A)
+  \end{equation}
+  \textmc{式(14)は、事象Aと$B^c$が独立であるときの、定義を表す式である。\\}
+  \textmc{よって、証明を得る。\\}
+
+\end{document}
