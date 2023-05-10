@@ -1,0 +1,58 @@
+\documentclass[dvipdfmx,uplatex]{jsarticle}
+\title{確率論第3回演習課題}
+\author{長田悠生}
+\date{2023/5/10}
+
+\usepackage{amsmath,amssymb}
+
+\begin{document}
+  \begin{titlepage}
+    \maketitle
+    \begin{center}
+      \textmc{\HUGE \LaTeX}
+    \end{center}
+    \thispagestyle{empty}
+  \end{titlepage}
+
+  \centerline{\huge 演習課題3A}
+  \vspace{10mm}
+  \textmc{まずは、$i$番目のコインが出る確率を求める。\\}
+  \textmc{$i$番目のコインが出る確率は、\\}
+  \begin{equation}
+    \frac{1}{k + 1}
+  \end{equation}
+  \textmc{
+    $i$番目のコインを確率$\frac{1}{k + 1}$で1枚選んだ後にコインを$n$回投げ、
+    1回目からn回目まで表が出た時、$n+1$回目で表が出る確率は、コインを投げる操作が
+    1回ごとに独立なので、
+  }
+  \begin{equation}
+    \frac{i}{k(k + 1)}
+  \end{equation}
+  \textmc{
+    コインの番号$i$は、$i=0,1,...,k$とあるので、全コインにおける
+    $n+1$回目に表が出る確率の和を求める必要がある。
+  }
+  \begin{equation}
+    \therefore \sum_{n=1}^{k} \frac{i}{k(k + 1)} = \frac{k(k + 1)}{2} \times \frac{1}{k(k + 1)} = \frac{1}{2}
+  \end{equation}
+
+  \newpage
+  \centerline{\huge 演習課題3B}
+  \vspace{10mm}
+  \textmc{$X-1$回までに、A・Bのみしかでない場合の確率を考えると、次式のように表される。\\}
+  \begin{equation}
+    \left( \frac{2}{3} \right)^{X-1} - 2 \times \left( \frac{1}{3} \right)^{X-1}
+  \end{equation}
+  \textmc{\small ※なお、$\left( \frac{2}{3} \right)^{X-1}$の確立には、Aのみ・Bのみが含まれているため$2 \times \left( \frac{1}{3} \right)^{X-1}$で除いている。\\}
+  \textmc{$X$回目にCが出る確率は、\\}
+  \begin{equation}
+    \left\{ \left( \frac{2}{3} \right)^{X-1} - 2 \times \left( \frac{1}{3} \right)^{X-1} \right\} \times \left( \frac{1}{3} \right)
+  \end{equation}
+  \textmc{同様に、$X-1$回目までにB・C、C・Aのみ出て、$X$回目にそれぞれA、Bが出る確率も(5)の式となる。\\}
+  \textmc{よって、回答は(5)の式の3倍なので、\\}
+  \begin{equation}
+    \therefore \left[ \left\{ \left( \frac{2}{3} \right)^{X-1} - 2 \times \left( \frac{1}{3} \right)^{X-1} \right\} \times \frac{1}{3} \right] \times 3 = \left( \frac{2}{3} \right)^{X-1} -2 \times \left( \frac{1}{3} \right)^{X-1}
+  \end{equation}
+
+\end{document}
