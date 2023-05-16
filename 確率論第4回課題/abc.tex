@@ -1,0 +1,41 @@
+\documentclass[dvipdfmx,uplatex]{jsarticle}
+\title{情報数学A 第4回(数学的論証)確認課題}
+\author{長田悠生}
+\date{2023/5/16}
+\usepackage{mathrsfs}
+
+\begin{document}
+  \begin{titlepage}
+    \maketitle
+    \begin{center}
+      \textmc{\HUGE \LaTeX}
+    \end{center}
+    \thispagestyle{empty}
+  \end{titlepage}
+  \begin{center}
+    \textmc{\large 問1}
+  \end{center}
+  \begin{flushleft}
+    $x \in \mathscr{P}(X) \cup \mathscr{P}(Y)$ \\
+    $\Leftrightarrow x \in \mathscr{P}(X) \lor x \in \mathscr{P}(Y)$ \\
+    $\Leftrightarrow (x \subset X) \lor (x \subset Y)$ \\
+    $\Leftrightarrow \forall a \in x (a \subset X) \lor \forall a \in x (a \in Y)$ \\
+    $\Rightarrow \forall a \in x (a \in X \lor a \in Y) \lor \forall a \in x (a \in X \lor a \in Y)$ \\
+    $\Rightarrow \forall a \in x (a \in X \lor a \in Y)$ \\
+    $\Rightarrow x \subset (X \cup Y)$ \\
+    $\Rightarrow x \in \mathscr{P}(X \cup Y)$
+  \end{flushleft}
+
+  \begin{center}
+    \textmc{\large 問2}
+  \end{center}
+  \begin{flushleft}
+    $(x, y) \in X \times (Y \cap Z)^c$ \\
+    $\Leftrightarrow (x \in X) \land y \notin (Y \cap Z)$ \\
+    $\Leftrightarrow (x \in X) \land \neg (y \in (Y \cap Z))$ \\
+    $\Leftrightarrow (x \in X) \land \neg (y \in Y \land y \in Z)$ \\
+    $\Leftrightarrow (x \in X) \land (y \notin Y \lor y \notin Z)$ \\
+    $\Leftrightarrow (x \in X \land y \notin Y) \lor (x \in X \land y \notin Z)$ \\
+    $\Leftrightarrow (X \times Y^c) \cup (X \times Z^c)$
+  \end{flushleft}
+\end{document}

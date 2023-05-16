@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.141592653-p4.1.0-u1.29-230214-2.6 (utf8.uptex) (TeX Live 2023) (preloaded format=uplatex 2023.4.20)  25 APR 2023 22:44
+This is e-upTeX, Version 3.141592653-p4.1.0-u1.29-230214-2.6 (utf8.uptex) (TeX Live 2023) (preloaded format=uplatex 2023.4.20)  10 MAY 2023 13:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -80,16 +80,24 @@ LaTeX Font Info:    Checking defaults for JY2/mc/m/n on input line 4.
 LaTeX Font Info:    ... okay on input line 4.
 LaTeX Font Info:    Checking defaults for JT2/mc/m/n on input line 4.
 LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 17.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 17.
+LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
+(Font)              scaled to size 6.47278pt on input line 17.
+LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
+(Font)              scaled to size 4.62341pt on input line 17.
  [1
 
 ] (./test.aux) ) 
 Here is how much of TeX's memory you used:
- 725 strings out of 476677
- 11882 string characters out of 5808165
- 1852484 words of memory out of 5000000
- 21263 multiletter control sequences out of 15000+600000
- 515801 words of font info for 55 fonts, out of 8000000 for 9000
+ 727 strings out of 476677
+ 11910 string characters out of 5808165
+ 1853484 words of memory out of 5000000
+ 21265 multiletter control sequences out of 15000+600000
+ 516157 words of font info for 57 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
  41i,13n,48p,158b,176s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on test.dvi (1 page, 2776 bytes).
+Output written on test.dvi (1 page, 3180 bytes).
