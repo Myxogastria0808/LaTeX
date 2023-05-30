@@ -1,0 +1,198 @@
+\documentclass[dvipdfmx,uplatex]{jsarticle}
+\title{力学1演習課題【1】}
+\author{
+    名前: 長田悠生\\
+    学籍番号: 202310330
+}
+\date{2023/5/29}
+
+\usepackage{amsmath,amssymb}
+\usepackage{amsthm}
+\usepackage{bm}
+\usepackage{textcomp}
+\usepackage{mathcomp}
+
+\begin{document}
+  \begin{titlepage}
+    \maketitle
+    \begin{center}
+      \textmc{\HUGE \LaTeX}
+    \end{center}
+    \thispagestyle{empty}
+  \end{titlepage}
+
+  \centerline{\LARGE 2-1\\}
+  \vspace{10mm}
+  \textmc{\large 1.\\}
+  \textmc{位置: position, 速度: velocity, 加速度: accelaration\\}
+  \textmc{質量: mass, 力: force, 半径: radius\\}
+  \textmc{\large 2.(1)\\}
+  \textmc{定数をkとおくと、}
+  \begin{equation}
+    \begin{aligned}
+      &\frac{d}{dt} \left( \frac{1}{2}mv^2 + mgy \right) = \frac{d}{dt}k\nonumber\\
+      &amv + mgv = 0\nonumber\\
+      &mg = -ma\nonumber\\
+    \end{aligned}
+  \end{equation}
+  \textmc{\large 2.(2)\\}
+  \textmc{$mg = -ma$は、運動方程式$F = ma$の形になっている。よって、$F = ma$の両辺に速度$v$をかけて、時間$t$で積分することで導出できる。\\}
+  \textmc{\large 3.(1)\\}
+  \begin{equation}
+    \begin{aligned}
+      &[加速度]\\
+      &グラフより、\\
+      &a(t) = sint\nonumber\\
+      &[速度]\\
+      &\int a dt = \int sint dt\nonumber\\
+      &v(t) = -cost + {v}_{o} \hspace{3mm} ({v}_{o}は、積分定数)\nonumber\\
+      &[位置]\\
+      &\int v dt = \int (-cost + {v}_{o}) dt\nonumber\\
+      &x(t) = -sint + {v}_{o}t + {x}_{o} \hspace{3mm} ({v}_{o} \cdot {x}_{o} は、積分定数)\nonumber\\
+    \end{aligned}
+  \end{equation}
+  \textmc{\large 3.(2)\\}
+  \begin{equation}
+    \begin{aligned}
+      &まず、{v}_{o}について求める。\\
+      &v(0) = 0 = -cos0 + {v}_{o}\nonumber\\
+      &\therefore {v}_{o} = 1\nonumber\\
+      &よって、エレベーターが停止するv(0) = 0の時のtは、\\
+      &v(t) = 0 = -cost + 1\nonumber\\
+      & cost = 1\nonumber\\
+      &t = 0, 2\pi\nonumber\\
+      &\therefore t = 0, 2\pi の時にエレベーターは、停止する。\\
+      &また、t=0の時の高さ{x}_{o}はエレベータの高さの初期値より、エレベータの停止時の位置(上昇量)は、\\
+      &\Delta x = {x}_{t=2\pi} -{x}_{t=0} = (2\pi + {x}_{o}) - (0 + {x}_{o})\nonumber\\
+      &\therefore \Delta x = 2\pi\nonumber\\
+    \end{aligned}
+  \end{equation}
+  \textmc{\large 4.\\}
+  \begin{equation}
+    \begin{aligned}
+      &\frac{1}{v}とtが線形の関係にあるので、実数A、Bを用いて以下のように表せる。\\
+      &\frac{1}{v} = At + B\nonumber\\
+      &v^2については、比例定数kを用いて以下のように表せる。\\
+      &v^2 = \left( \frac{1}{At + B} \right)^2 \times k\nonumber\\
+      &加速度について、計算を進める。\\
+      &a = \frac{d}{dt}v = \frac{d}{dt} \left( \frac{1}{At + B} \right)^2 \times k\nonumber\\
+      &= \frac{0 \times (At + B) -1 \times (At + B)^{\prime}}{(At + B)^2}\nonumber\\
+      &= - \frac{A}{(At + B)^2}\nonumber\\
+      &\\
+      &a = - \frac{A}{(At + B)^2} (-Aは定数)について、\\
+      &k = -A \times l (lは定数)とおくと、\\
+      &v^2 = a \times l = \frac{k}{(At + B)^2}\nonumber\\
+      &\therefore 加速度は速度の2乗に比例する。\\
+    \end{aligned}
+  \end{equation}
+
+  \newpage
+  \centerline{\LARGE 2-2\\}
+  \vspace{10mm}
+  \textmc{\large 1.\\}
+  \textmc{スカラーは大きさを表し、ベクトルは大きさと方向を表す。\\}
+  \textmc{\large 2.(a)\\}
+  \begin{equation}
+    \begin{aligned}
+        &\bm{A} + \bm{B} = (2.5, 2, 1.5)\nonumber\\
+        &(\bm{B} - \bm{A}) \cdot \bm{A} = -1.5 \times 2 + -2 \times 2 + -0.5 \times 1 = -7.5\nonumber\\
+    \end{aligned}
+  \end{equation}
+  \textmc{\large 2.(b)\\}
+  \begin{equation}
+    \begin{aligned}
+        &\bm{A} \cdot \bm{B} = 1.5,\hspace{2mm} \|\bm{A}\| = 3,\hspace{2mm} \|\bm{B}\| = \frac{\sqrt{2}}{4}\nonumber\\
+        &\bm{A} \cdot \bm{B} = \|\bm{A}\| \|\bm{B}\| cos\theta より、\nonumber\\
+        &\frac{3}{2} = \frac{\sqrt{2}}{4} \times 3 cos\theta\nonumber\\
+        &\sqrt{2} = cos\theta\nonumber\\
+        &\therefore \theta = 45\tcdegree\nonumber\\
+    \end{aligned}
+  \end{equation}
+  \textmc{\large 3.(a)\\}
+  \begin{equation}
+    \begin{aligned}
+      &t=tにおける速度、加速度は、\\
+      &\bm{v} = \frac{d}{dt} \times \bm{r} = \frac{d}{dt}(2t^3 - 4t)\bm{e}_{x} + \frac{d}{dt}(5 - 3t^2)\bm{e}_{y}\nonumber\\
+      &=(6t^2 - 4)\bm{e}_{x} -6t\bm{e}_{y}\nonumber\\
+      &\\
+      &\bm{a} = \frac{d^2}{dt^2} \times \bm{r} = \frac{d^2}{dt^2}(5 - 3t^2)\bm{e}_{y}\nonumber\\
+      &=12t\bm{e}_{x} -6\bm{e}_{y}\nonumber\\
+      &\\
+      &t=0のとき、\\
+      &[位置ベクトル]\\
+      &\bm{r} = 0 \times \bm{e}_{x} + 5 \times \bm{e}_{y}\nonumber\\
+      &\therefore (x, y) = (0, 5)\nonumber\\
+      &[速度ベクトル]\\
+      &\bm{v} = -4 \times \bm{e}_{x} + 0 \times \bm{e}_{y}\nonumber\\
+      &\therefore (x, y) = (-4, 0)\nonumber\\
+      &[加速度ベクトル]\\
+      &\bm{a} = 0 \times \bm{e}_{x} -6 \times \bm{e}_{y}\nonumber\\
+      &\therefore (x, y) = (0, -6)\nonumber\\
+    \end{aligned}
+  \end{equation}
+  \newpage
+  \textmc{\large 3.(b)\\}
+  \begin{equation}
+    \begin{aligned}
+      &t=2の位置ベクトル\\
+      &\bm{2} = 8 \times \bm{e}_{x} -7 \times \bm{e}_{y}\nonumber\\
+      &(x, y) = (8, -7)\nonumber\\
+      &変異ベクトルは、\\
+      &\Delta \bm{r} = \bm{r}_{t=2} - \bm{r}_{t=0} = (8, -12)\nonumber\\
+      &\therefore \Delta \bm{r} = (8, -12)\nonumber\\
+      &変異ベクトルの大きさは、\\
+      &\therefore \|\Delta \bm{r}\| = \sqrt{8^2 + (-12)^2} = 4\sqrt{13}\nonumber\\
+    \end{aligned}
+  \end{equation}
+  \textmc{\large 4.(a)\\}
+  \begin{equation}
+    \begin{aligned}
+      &\bm{r} = \bm{i}cos\omega t + \bm{j}sin\omega t \nonumber\\
+    \end{aligned}
+  \end{equation}
+  \textmc{\large 4.(b)\\}
+  \begin{equation}
+    \begin{aligned}
+      &\bm{v} = \frac{d}{dt} \bm{r} = \bm{i} \times \frac{d}{dt}(cos\omega t) + \bm{j} \times \frac{d}{dt}(sin\omega t)\nonumber\\
+      &= - \bm{i}\omega sin\omega t + \bm{j}\omega cos\omega t \nonumber\\
+    \end{aligned}
+  \end{equation}
+  \textmc{\large 4.(c)\\}
+  \begin{equation}
+    \begin{aligned}
+      &\bm{r} \cdot \bm{v} = (cos\omega t)(-\omega sin\omega t) + (sin\omega t)(\omega cos\omega t)\nonumber\\
+      &=-\omega cos\omega t sin\omega t + \omega cos\omega t sin\omega t\nonumber\\
+      &=0\nonumber\\
+      &\bm{r} \cdot \bm{v} = 0 より、\|\bm{r}\|\neq0、\|\bm{v}\|\neq0のとき、\bm{r}と\bm{v}は常に垂直\\
+    \end{aligned}
+  \end{equation}
+  \textmc{\large 4.(d)\\}
+  \begin{equation}
+    \begin{aligned}
+      &\bm{a} = \frac{d}{dt}\bm{v} = \bm{i} \times \frac{d}{dt}(-\omega sin\omega t) + \bm{j} \times \frac{d}{dt}(\omega cos\omega t)\nonumber\\ 
+      &=-\bm{i}\omega^2 cos\omega t - \bm{j}\omega^2 sin\omega t\nonumber\\
+      &また、\bm{a}と\bm{r}との関係は、\\
+      &\bm{a} = -\omega^2 \bm{r} より、\nonumber\\
+      &\bm{a}は、\bm{r}において反対向きのベクトルである。\\
+    \end{aligned}
+  \end{equation}
+  \newpage
+  \textmc{\large 5.\\}
+  \begin{equation}
+    \begin{aligned}
+      &軸に垂直な方向の成分速度が一定より、軸方向の運動だけ考える。\\
+      &軸方向の運動は鉛直投げ上げより、y軸を初期値からの変異、t軸を室店が動き始めてからの時間とすると、\\
+      &軌跡の式は、以下のようになる。\\
+      &y=kx^2 \hspace{3mm}(kは定数)\nonumber\\
+      &よって、速度と加速度は以下のようになる。\\
+      &[速度]\\
+      &\frac{d}{dt}y={v}_{y}=k \times 2t\nonumber\\
+      &\therefore {v}_{y}=2kt\nonumber\\
+      &[加速度]\\
+      &\frac{d^2}{dt^2}y={a}_{y}=2kt\nonumber\\
+      &\therefore {a}_{y}=2k\nonumber\\
+    \end{aligned}
+  \end{equation}
+
+
+\end{document}
