@@ -1,0 +1,71 @@
+\documentclass[dvipdfmx,uplatex]{jsarticle}
+\title{確率論第6回課題}
+\author{
+    学籍番号: 202310330\\
+    名前: 長田悠生
+    }
+\date{2023/6/4}
+
+\usepackage{amsmath,amssymb}
+
+\begin{document}
+  \begin{titlepage}
+    \maketitle
+    \begin{center}
+      \textmc{\HUGE \LaTeX}
+    \end{center}
+    \thispagestyle{empty}
+  \end{titlepage}
+
+  \centerline{\huge 演習課題6A}
+  \vspace{10mm}
+  \textmc{確率変数をX、確率質量関数を${p}_{X}(x)$としたとき、期待値は以下の式で表せる。}
+  \begin{equation}
+    \sum_{x} x{p}_{X}(x)\nonumber\\
+  \end{equation}
+  \textmc{
+    ${p}_{X}(xi)$を$k$回目までに目標の当たりの数-1の当たりが出てから$k+1$回目に目標の当たりの数が出る確率だとすると、
+    ${p}_{X}(xi)$は幾何分布となり、期待値は$試行回数 \times {p}_{X}(xi + 1)$より、$xi$までの試行回数を$k$と置いているので、
+  }
+  \begin{equation}
+    \begin{aligned}
+        &E[Xi] = \sum_{k=0}^\infty (k+1)p(1-p)^k\nonumber\\
+        &=p \times \sum_{k=0}^\infty (k+1)(1-p)^k\nonumber\\
+        &=p \left\{ \lim_{n \to \infty} \sum_{k=0}^n (k+1)(1-p)^k \right\}\nonumber\\
+        &=p \left\{ \lim_{n \to \infty} \frac{1-(1-p)^{n+1}}{p^2} -\lim_{n \to \infty} \frac{(n+1)(1-p)^{n+1}}{p} \right\}\nonumber\\
+        &= \frac{1}{p}\nonumber\\
+        \\
+        &E[X]=E[X1] + E[X2] + \cdots + E[Xr]\nonumber\\
+        &=r \times \frac{1}{p} = \frac{r}{p}\nonumber\\
+        &\therefore E[X]=\frac{r}{p}\nonumber\\
+    \end{aligned}
+  \end{equation}
+
+  \newpage
+  \centerline{\huge 演習課題6B}
+  \vspace{10mm}
+  \textmc{\large (a)\\}
+  \begin{equation}
+    \begin{aligned}
+        &\int_{\infty}^{-\infty} f(x) dx = 1 より、 \nonumber\\
+        &\int_{\infty}^{-\infty} {f}_{X}(x) dx = \int_{-\infty}^{0} {f}_{X}(x) dx + \int_{0}^{\infty} {f}_{X}(x) dx = 1 \nonumber\\
+        &=0 + \int_{0}^{\infty} \lambda e^{-\frac{x}/100} dx \nonumber\\
+        &=0 + \left[ -100 \lambda e^{-\frac{x}/100}  \right]_0^\infty\nonumber\\
+        &100\lambda=1\nonumber\\
+        &\therefore \lambda=\frac{1}{100}\nonumber\\
+    \end{aligned}
+\end{equation}
+
+\textmc{\large (b)\\}
+\begin{equation}
+  \begin{aligned}
+    &0 \leq x \leq 100の範囲の{f}_{X}(x)についての積分を行えばよいので、\nonumber\\
+    &\int_{0}^{100} f(x) dx = \int_{0}^{100} \lambda e^{-\frac{x}/100} dx\nonumber\\
+    &= \left[ -100 \lambda e^{-\frac{x}/100}  \right]_0^100 \nonumber\\
+    &= 100\lambda - \frac{100\lambda}{e}\nonumber\\
+    &\lambda = \frac{1}{100}より、\nonumber\\
+    &=1-\frac{1}{e}\nonumber\\
+    &\therefore 1-\frac{1}{e}\nonumber\\
+  \end{aligned}
+\end{equation}
+\end{document}

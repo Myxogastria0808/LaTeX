@@ -1,0 +1,125 @@
+\documentclass[dvipdfmx,uplatex]{jsarticle}
+\title{線形代数A第2回演習課題}
+\author{
+    名前: 長田悠生\\
+    学籍番号: 202310330
+    }
+\date{2023/6/4}
+
+\usepackage{amsmath,amssymb}
+\usepackage{bm}
+\usepackage{mathtools}
+
+\begin{document}
+  \begin{titlepage}
+    \maketitle
+    \begin{center}
+      \textmc{\HUGE \LaTeX}
+    \end{center}
+    \thispagestyle{empty}
+  \end{titlepage}
+
+  \textmc{\large 1.(1)\\}
+  \textmc{
+    この方程式の切片はbより、$(x, y)=(0, b)$なので、位置ベクトル$\bm{a}=(0, b)$とおける。
+    また、方向ベクトルは、この方程式の傾きより、
+    方向ベクトル$\bm{v}=(1, a)$とおける。
+  \\}
+  \begin{equation}
+    \begin{aligned}
+        &\therefore \begin{pmatrix} x\\ y\\ \end{pmatrix} = \begin{pmatrix} 0\\ b\\ \end{pmatrix} + t\begin{pmatrix} 1\\ a\\ \end{pmatrix}\nonumber\\
+    \end{aligned}
+  \end{equation}
+
+  \textmc{\large 1.(2)\\}
+  \textmc{
+    $x=c$となるのは$y=0$のときより、位置ベクトル$\bm{a}=(c, 0)$とおける。
+    また、y軸と並行なので傾きを$(x, y)=(0, 1)$と表せる。
+    よって、方向ベクトルは$\bm{v}=(0,1)$とおける。
+  \\}
+  \begin{equation}
+    \begin{aligned}
+        &\therefore \begin{pmatrix} x\\ y\\ \end{pmatrix} = \begin{pmatrix} c\\ 0\\ \end{pmatrix} + t\begin{pmatrix} 0\\ 1\\ \end{pmatrix}\nonumber\\
+    \end{aligned}
+  \end{equation}
+
+  \textmc{\large 1.(3)\\}
+  \begin{equation}
+    \begin{aligned}
+        & x=p+tu \cdots ① \nonumber\\
+        & y=q+tv \cdots ② \nonumber\\
+        &① \times v - ② \times uより、\nonumber\\
+        &\therefore (x-p)v=(y-q)u \nonumber\\
+    \end{aligned}
+  \end{equation}
+
+  \textmc{\large 2.(1)\\}
+  \begin{equation}
+    \begin{aligned}
+        &直線l,mをパラメータ表示する。\nonumber\\
+        &\begin{pmatrix} x\\ y\\ z\\ \end{pmatrix} = \begin{pmatrix} a\\ 0\\ 1\\ \end{pmatrix} + t\begin{pmatrix} 2\\ 1\\ 3\\ \end{pmatrix} \cdots l \nonumber\\
+        &\begin{pmatrix} x\\ y\\ z\\ \end{pmatrix} = \begin{pmatrix} 1\\ b\\ 2\\ \end{pmatrix} + t\begin{pmatrix} 5\\ -2\\ 4\\ \end{pmatrix} \cdots m \nonumber\\
+        &平面Hの法線ベクトルを\bm{n}=\begin{pmatrix} X\\ Y\\ Z\\ \end{pmatrix}とおく。
+        また、lの法線ベクトルを\bm{l}_{v}・mの法線ベクトルを\bm{m}_{u}とおく。\nonumber\\
+        &このとき、(\bm{n}, \bm{l}_{v})=0かつ(\bm{n}, \bm{m}_{u})=0より、\nonumber\\
+        &(\bm{n}, \bm{l}_{v})=2X + Y + 3Z=0 \cdots① \nonumber\\
+        &(\bm{n}, \bm{m}_{u})= 5X - 2Y + 4Z =0 \cdot② \nonumber\\
+        &①と②の式より、\begin{pmatrix*}[c] X\\\vspace{0.8mm} \frac{7}{10}X\\ \vspace{0.8mm} -\frac{9}{10}X\\ \end{pmatrix*} \nonumber\\
+        &平面を表す式は、法線ベクトル\bm{n} = \begin{pmatrix} a\\ b\\ c\\ \end{pmatrix}、
+        位置ベクトル\bm{x}=\begin{pmatrix} x\\ y\\ z\\ \end{pmatrix}・\bm{a}=\begin{pmatrix} {x}_{1}\\ {y}_{1}\\ {z}_{1}\\ \end{pmatrix}
+        としたとき、以下のように表せる。 \nonumber\\
+        &a(x-{x}_{1}) + b(y-{y}_{1}) + c(z-{z}_{1}) = 0 \nonumber\\
+        &上記の式を2.(1)で求める平面の方程式に当てはめる。すると、以下の方程式になる。それが平面Hの方程式である。\nonumber\\
+        &\therefore 10x + 7y - 9z = 0 \nonumber\\
+    \end{aligned}
+  \end{equation}
+
+  \textmc{\large 2.(2)\\}
+  \begin{equation}
+    \begin{aligned}
+        &lの位置ベクトルを\bm{l}_{a}・m位置ベクトルを\bm{m}_{a}とおくと、\nonumber\\
+        &\bm{l}_{a} = \begin{pmatrix} a\\ 0\\ 1\\ \end{pmatrix}、\bm{m}_{a} = \begin{pmatrix} 1\\ b\\ 2\\ \end{pmatrix}である。\nonumber\\
+        &この2点は、平面H上の点より、hの方程式を満たす。よって、\nonumber\\
+        &10 \times a + 7 \times 0 + -9 = 0 \nonumber\\
+        &\therefore a=\frac{9}{10}\nonumber\\
+        &10 + 7b -18 = 0\nonumber\\
+        &\therefore b=\frac{8}{7}\nonumber\\
+    \end{aligned}
+  \end{equation}
+
+  \textmc{\large 3.(1)\\}
+  \begin{equation}
+    \begin{aligned}
+        &まず、交線の方向ベクトルを求める。\nonumber\\
+        &x-y+2z=1を平面A、2x+y-z=-1を平面Bとおく。\nonumber\\
+        &また、平面Aの法線ベクトルを{n}_{A}、平面Bの法線ベクトルを{n}_{B}とおくと、\nonumber\\
+        &\bm{n}_{A}= \begin{pmatrix} 1\\ -1\\ 2\\ \end{pmatrix}、\bm{n}_{B} = \begin{pmatrix} 2\\ 1\\ -1\\ \end{pmatrix} \nonumber\\
+        &3.(1)で求める交線を\bm{l}=\bm{a} + t\bm{v}とおくと、 \nonumber\\
+        &(\bm{n}_{A}, \bm{v})=0かつ(\bm{n}_{B}, \bm{v})=0であるので、\bm{v} = \begin{pmatrix} X\\ Y\\ Z\\ \end{pmatrix}としたとき、\nonumber\\
+        &(\bm{n}_{A}, \bm{v})=X-Y+2Z=0 \cdots① \nonumber\\
+        &(\bm{n}_{B}, \bm{v})=2X+Y-Z=0 \cdots② \nonumber\\
+        &①と②より、\nonumber\\
+        &\bm{v}=\begin{pmatrix} X\\ -5X\\ 3X\\ \end{pmatrix}\nonumber\\
+        &また、位置ベクトルを求める為に、z=0のときのx、yの値を求める。\nonumber\\
+        &x-y=1 \cdots 平面A \nonumber\\
+        &2x+y=-1 \cdots 平面B \nonumber\\
+        &上記の連立方程式を解くと、以下の答えが出てくる。\nonumber\\
+        &(x, y, z) = (0, -1, 0)\nonumber\\
+        &そのため、位置ベクトル\bm{m}は、 \bm{m} = \begin{pmatrix} 0\\ -1\\ 0\\ \end{pmatrix}\nonumber\\
+        &\therefore \begin{pmatrix} x\\ y\\ z\\ \end{pmatrix} = \begin{pmatrix} 0\\ -1\\ 0\\ \end{pmatrix} + t\begin{pmatrix} 1\\ -5\\ -3\\ \end{pmatrix}\nonumber\\
+    \end{aligned}
+  \end{equation}
+
+  \newpage
+  \textmc{\large 3.(2)\\}
+  \begin{equation}
+    \begin{aligned}
+        &求めたい平面の法線ベクトルを\bm{n}とおくと、\bm{n}はlの方向ベクトルで、\nonumber\\
+        &lとxy平面との交点を通ることから、位置ベクトル\bm{m}は、\bm{m}= \begin{pmatrix} 0\\ -1\\ 0\\ \end{pmatrix} \nonumber\\
+        &平面の法線ベクトルと位置ベクトルを、平面の方程式に当てはめると以下のような式になる。\nonumber\\
+        &以下の式が、3.(2)で求める平面の方程式である。\nonumber\\
+        &\therefore x-5y-3z-2=0 \nonumber\\
+    \end{aligned}
+  \end{equation}
+
+\end{document}

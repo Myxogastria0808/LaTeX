@@ -1,0 +1,240 @@
+\documentclass[dvipdfmx,uplatex]{jsarticle}
+\title{力学1演習課題【2】}
+\author{
+    名前: 長田悠生\\
+    学籍番号: 202310330
+    }
+\date{2023/6/7}
+
+\usepackage{amsmath,amssymb}
+\usepackage{amsthm}
+\usepackage{bm}
+
+\usepackage{listings,jvlisting}
+\lstset{
+  basicstyle={\ttfamily},
+  identifierstyle={\small},
+  commentstyle={\smallitshape},
+  keywordstyle={\small\bfseries},
+  ndkeywordstyle={\small},
+  stringstyle={\small\ttfamily},
+  frame={tb},
+  breaklines=true,
+  columns=[l]{fullflexible},
+  numbers=left,
+  xrightmargin=0zw,
+  xleftmargin=3zw,
+  numberstyle={\scriptsize},
+  stepnumber=1,
+  numbersep=1zw,
+  lineskip=-0.5ex
+}
+
+\begin{document}
+  \begin{titlepage}
+    \maketitle
+    \begin{center}
+      \textmc{\HUGE \LaTeX}
+    \end{center}
+    \thispagestyle{empty}
+  \end{titlepage}
+
+  \textmc{\large 1.(a)\\}
+  \begin{equation}
+    \begin{aligned}
+        &y成分の変化のみを考えればよいので、以下の通りである。 \nonumber\\
+        &Answer\hspace{3mm} \frac{d^2}{dt^2}y \nonumber\\
+    \end{aligned}
+  \end{equation}
+  \textmc{\large 1.(b)\\}
+  \begin{equation}
+    \begin{aligned}
+        &Answer\hspace{3mm} F=m\frac{d^2}{dt^2}x \nonumber\\
+    \end{aligned}
+  \end{equation}
+  \textmc{\large 1.(c)\\}
+  \begin{equation}
+    \begin{aligned}
+        &Answer\hspace{3mm} F=-kx^{\prime}\nonumber\\
+    \end{aligned}
+  \end{equation}
+  \textmc{\large 1.(d)\\}
+  \begin{equation}
+    \begin{aligned}
+        &方向だけわかれば答えが出るので、力の方向を調べる。\nonumber\\
+        &\bm{r}と\bm{a}の向きの関係は、\nonumber\\
+        &\bm{r} = \|r\|(cos\omega t + sin\omega t)\nonumber\\
+        &\bm{a} = \|r\|(-\omega^2 cos\omega t -\omega^2 sin\omega t) \nonumber\\
+        &より、-\omega^2 \bm{r} = \bm{a}である。\nonumber\\
+        & \therefore \bm{F}=m\|r\|\omega^2 \times -\frac{\bm{r}}{\|\bm{r}\|}\nonumber\\
+        &Answer\hspace{3mm} \bm{F} = -m\bm{r}\omega^2
+    \end{aligned}
+  \end{equation}
+
+  \textmc{\large 2.(a)\\}
+  \begin{equation}
+    \begin{aligned}
+        &Answer\hspace{3mm} F= ma = mg -k\frac{dx}{dt}\nonumber\\
+    \end{aligned}
+  \end{equation}
+
+  \textmc{\large 2.(b)\\}
+  \begin{equation}
+    \begin{aligned}
+        &Answer\hspace{3mm} F= ma = m\frac{dv}{dt} = mg -kv\nonumber\\
+    \end{aligned}
+  \end{equation}
+
+  \textmc{\large 2.(c)\\}
+  \begin{equation}
+    \begin{aligned}
+        &加速度は、f=-kvとF=mgが釣り合うと0になる。\nonumber\\
+        &よって、k{v}_{t}=mgのときである。\nonumber\\
+        &Answer\hspace{3mm} {v}_{t}=\frac{mg}{k}
+    \end{aligned}
+  \end{equation}
+
+  \newpage
+  \textmc{\large 2.(d)\\}
+  \begin{equation}
+    \begin{aligned}
+        &m\frac{dv}{dt} = mg -kv\nonumber\\
+        &\frac{dv}{dt} = g - \frac{kv}{m}\nonumber\\
+        &g - \frac{kv}{m} = \eta でおく。tで微分した場合、\nonumber\\
+        &-\frac{dv}{dt} = \frac{m}{k} \times \frac{d\eta}{dt} \nonumber\\
+        &\int \frac{1}{\eta} d\eta = \int -\frac{k}{m} dt \nonumber\\
+        &\log_e |\eta| + {C}_{1} = -\frac{k}{m}t + {C}_{2}\nonumber\\
+        &{C}_{2} - {C}_{1} = Cとおくと、\nonumber\\
+        &\log_e |\eta| = -\frac{k}{m}t + {C}\nonumber\\
+        &Answer\hspace{3mm} v=\frac{mg}{k} \left( 1-\frac{e^{-\frac{k}{m}t}}{g} \times e^c \right)\nonumber\\
+    \end{aligned}
+  \end{equation}
+
+  \textmc{\large 2.(e)\\}
+  \textmc{
+    運動の開始直後は、速度がほぼ0のために空気抵抗もほぼ0である。よって、運動の開始直後は自由落下運動と近似できる。
+    しかし、運動の終盤になると空気抵抗によって生じる重力と反対方向の力が大きくなっていき、やがて重力と空気抵抗による
+    力は釣り合う。力が釣り合うと、加速度は0になるため、速度は一定になる。
+  }
+
+  \textmc{\large 3.(a)\\}
+  \begin{equation}
+    \begin{aligned}
+        &x = acos\theta,\hspace{3mm} y = bsin\theta より、\nonumber\\
+        &楕円の式 \frac{x^2}{a^2} + \frac{y^2}{b^2} = 1 に当てはめることができる。\nonumber\\
+        &よって、運動の軌跡は、長軸の長さがa、単軸の長さがbの楕円である。\nonumber\\
+    \end{aligned}
+  \end{equation}
+
+  \textmc{\large 3.(b)\\}
+  \begin{equation}
+    \begin{aligned}
+        &\frac{d\bm{r}}{dt} = \bm{v} = (-a\omega sin\omega t, b\omega cos\omega t)より、 \nonumber\\
+        &\bm{v}_{x} = -a\omega sin\omega t、\bm{v}_{y} = b\omega cos\omega tで速度変化する。 \nonumber\\
+    \end{aligned}
+  \end{equation}
+
+  \newpage
+  \centerline{\LARGE 3-1章\\}
+  \vspace{10mm}
+
+  \textmc{\large (1)\\}
+  \begin{equation}
+    \begin{aligned}
+        &鉛直方向をy軸、質点が落下し始めてからの経過時間をt、鉛直方向の速度を{v}_{t}と置く。\nonumber\\
+        &F = m\frac{d^2}{dt^2}y = -mg \nonumber\\
+        &\frac{d}{dt} {v}_{y} = -g \nonumber\\
+        &{v}_{y} = \int -g dt \nonumber\\
+        &= -gt + {C}_{1} \nonumber\\
+        &自由落下運動の初期時間と初期速度は共に0より、\nonumber\\
+        &t = 0, \hspace{2mm} {v}_{y} = 0なので、 \nonumber\\
+        &0 = -g \times 0 + {C}_{1} \nonumber\\
+        &{C}_{1} = 0 \nonumber\\
+        &\therefore {v}_{y} = -gt \nonumber\\
+        &次に、yについて求める。\nonumber\\
+        &\int {v}_{y} dt = \int -gt dt \nonumber\\
+        &y = -\frac{1}{2}gt^2 + {C}_{2} \nonumber\\
+        &初期条件より、t=0のとき、\nonumber\\
+        &y=hなので、h={C}_{2}\nonumber\\
+        &Answer\hspace{3mm} y=-\frac{1}{2}gt^2 + h \nonumber\\
+    \end{aligned}
+  \end{equation}
+
+  \textmc{\large (2)\\}
+  \begin{equation}
+    \begin{aligned}
+        &y=0のときより、\nonumber\\
+        &gt^2 = 200 \nonumber\\
+        &t^2 = \frac{200}{g} \nonumber\\
+        & t> 0より、 \nonumber\\
+        &t = \sqrt{\frac{200}{g}} = \frac{10\sqrt{2g}}{g} \nonumber\\
+        &Answer\hspace{3mm} \frac{10\sqrt{2g}}{g} \nonumber\\
+    \end{aligned}
+  \end{equation}
+
+  \textmc{\large (3)\\}
+  \begin{equation}
+    \begin{aligned}
+        &Answer\hspace{3mm} F = m \frac{dv}{dt} = mg - \gamma \left( \frac{dh}{dt} \right)^2 \nonumber\\
+    \end{aligned}
+  \end{equation}
+
+  \newpage
+  \textmc{\large (4)\\}
+  \begin{equation}
+    \begin{aligned}
+        &z(t + \Delta t) = z(t) + z(\Delta t) \nonumber\\
+        &=z(t) + \frac{dz}{dt} \nonumber\\
+        &=z(t) + v(t)\Delta t \hspace{10mm} \square \nonumber\\
+        &v(t + \Delta t) = v(t) + v(\Delta t)\nonumber\\
+        &=v(t) + \frac{dv}{dt}\nonumber\\
+        &\frac{dv}{dt} = g - \frac{\gamma v(t)^2}{m}に代入\nonumber\\
+        &=v(t) - \left(g - \frac{\gamma v(t)^2}{m} \right) \Delta t \hspace{10mm} \square \nonumber\\
+    \end{aligned}
+  \end{equation}
+
+  \textmc{\large (5)\\}
+  \textmc{$\Delta t = 0.1s$を(1)、(2)の式に代入して、$z(t)\fallingdotseq 0 (実際は、z(t) < 0)$となる瞬間を計算する。\\}
+  \textmc{今回は、計算にR言語を用いた。以下、ソースコードである。\\}
+  \begin{lstlisting}
+v=0
+z=100
+
+for (t in 2:322) {
+    v = v - (9.80665 -v^2) *0.1 #(2)の式
+    z = z + v*0.1 #(1)の式
+    print(z)
+}
+  \end{lstlisting}
+  \textmc{＊重力加速度は、国際度量衡総会における標準加速度を用いている。\\}
+  \textmc{上記のコードは1回の試行で100ミリ秒進み、322回の試行(=32.2秒)までの結果をターミナルに表示するものとなっている。\\}
+  \textmc{以下、結果\\}
+  \begin{lstlisting}
+[1] 99.90193
+[1] 99.71542
+[1] 99.46562
+...
+[1] 0.8672443
+[1] 0.5540886
+[1] 0.2409329
+[1] -0.07222281
+Finish
+  \end{lstlisting}
+  \textmc{よって、試行回数321回(32.1秒)から322回(32.2秒)の間に地面に着いたことになる。\\}
+  \newpage
+  \textmc{もう少し詳しく調べてみる。以下の結果は、10ミリ秒刻みで3216回試行した時のものである。\\}
+  \begin{lstlisting}
+[1] 99.99902
+[1] 99.99706
+[1] 99.99412
+...
+[1] 0.08236598
+[1] 0.05105041
+[1] 0.01973484
+[1] -0.01158073
+Finish
+  \end{lstlisting}
+  \textmc{試行回数3215回(32.15秒)から3216回(32.16秒)の間に地面に着いたことになる。\\}
+  \textmc{よって、$\Delta t = 0.1s$より32.1秒から32.2秒の間に地面に着いたと推定できる。\\}
+
+\end{document}
