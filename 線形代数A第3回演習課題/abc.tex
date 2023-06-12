@@ -1,0 +1,207 @@
+\documentclass[dvipdfmx,uplatex]{jsarticle}
+\title{線形代数A第3回演習課題}
+\author{
+    名前: 長田悠生\\
+    学籍番号: 202310330\\
+}
+\date{2023/6/12}
+
+\usepackage{amsmath,amssymb}
+\usepackage{bm}
+\usepackage{mathtools}
+
+\begin{document}
+  \begin{titlepage}
+    \maketitle
+    \begin{center}
+      \textmc{\HUGE \LaTeX}
+    \end{center}
+    \thispagestyle{empty}
+  \end{titlepage}
+
+  \textmc{\large 1.\\}
+  \begin{equation}
+    \begin{aligned}
+        &A + {B}_{2} = \begin{pmatrix} 1 & 0 \\ -3 & 6 \\ 8 & -1 \\ \end{pmatrix} \nonumber\\
+        &A \times {B}_{1} = \begin{pmatrix} -11 & 11 \\ -13 & 21 \\ 12 & -5 \\ \end{pmatrix} \nonumber\\
+        &A \times {B}_{3} = \begin{pmatrix} -15 & 1 & 13 \\ -17 & 7 & 11 \\ 17 & 4 & -18 \\ \end{pmatrix} \nonumber\\
+        &A \times {B}_{6} = \begin{pmatrix} 1 \\ 7 \\ 4 \\ \end{pmatrix} \nonumber\\
+        &A \times {B}_{6} = \begin{pmatrix} 1 \\ 7 \\ 4 \\ \end{pmatrix} \nonumber\\
+    \end{aligned}
+  \end{equation}
+
+  \textmc{\large 2.(1)\\}
+  \begin{equation}
+    \begin{aligned}
+        &A \times A^{T} = \begin{pmatrix} a & -b \\ b & a \\ \end{pmatrix} \times \begin{pmatrix} a & b \\ -b & a \\ \end{pmatrix} = \begin{pmatrix} a^2 + b^2 & 0 \\ 0 & a^2 + b^2 \\ \end{pmatrix} \nonumber\\
+        &A^{T} \times A = \begin{pmatrix} a & b \\ -b & a \\ \end{pmatrix} \times \begin{pmatrix} a & -b \\ b & a \\ \end{pmatrix} = \begin{pmatrix} a^2 + b^2 & 0 \\ 0 & a^2 + b^2 \\ \end{pmatrix} \nonumber\\
+        & \therefore  A \times A^{T} = A^{T} \times A \nonumber\\
+    \end{aligned}
+  \end{equation}
+
+  \textmc{\large 2.(2)\\}
+  \begin{equation}
+    \begin{aligned}
+        &A + A^{T} = \begin{pmatrix} a & -b \\ b & a \\ \end{pmatrix} + \begin{pmatrix} a & b \\ -b & a \\ \end{pmatrix} = 2a \times \begin{pmatrix} 1 & 0 \\ 0 & 1 \\ \end{pmatrix} = 2aE \nonumber\\
+        &A - A^{T} = \begin{pmatrix} a & -b \\ b & a \\ \end{pmatrix} - \begin{pmatrix} a & b \\ -b & a \\ \end{pmatrix} = 2b \times \begin{pmatrix} 0 & -1 \\ 1 & 0 \\ \end{pmatrix} = 2bI \nonumber\\
+        &A \times A^{T} = \begin{pmatrix} a & -b \\ b & a \\ \end{pmatrix} \times \begin{pmatrix} a & b \\ -b & a \\ \end{pmatrix} = (a^2 + b^2) \times \begin{pmatrix} 1 & 0 \\ 0 & 1 \\ \end{pmatrix} = (a^2 + b^2)E \nonumber\\
+    \end{aligned}
+  \end{equation}
+
+  \newpage
+  \textmc{\large 3.(1)\\}
+  \begin{equation}
+    \begin{aligned}
+        &任意の正方行列をn \times n行列 \left\{n \in \mathbb{N} (\mathbb{N} > 1) \right\}とおく。\nonumber\\
+        &A = \left(
+          \begin{array}{cccc}
+          a_{11} & a_{12} & \ldots & a_{1n} \\
+          a_{21} & \ddots & \ddots & \vdots \\
+          \vdots & \ddots & \ddots & \vdots \\
+          a_{n1} & \ldots & \ldots & a_{nn}
+          \end{array}
+          \right)と表現するとする。\nonumber\\
+        &A + A^{T} = \left(
+          \begin{array}{cccc}
+          a_{11} & a_{12} & \ldots & a_{1n} \\
+          a_{21} & \ddots & \ddots & \vdots \\
+          \vdots & \ddots & \ddots & a_{n-1n} \\
+          a_{n1} & \ldots & a_{nn-1} & a_{nn}
+          \end{array}
+          \right) + 
+          \left(
+          \begin{array}{cccc}
+          a_{11} & a_{21} & \ldots & a_{n1} \\
+          a_{12} & \ddots & \ddots & \vdots \\
+          \vdots & \ddots & \ddots & a_{nn-1} \\
+          a_{1n} & \ldots & a_{n-1n} & a_{nn}
+          \end{array}
+          \right) \nonumber\\
+        &= \left(
+          \begin{array}{cccc}
+          a_{11} + a_{11} & a_{12} + a_{21} & \ldots & a_{1n} + a_{n1} \\
+          a_{21} + a_{12} & \ddots & \ddots & \vdots \\
+          \vdots & \ddots & \ddots & a_{n-1n} + a_{nn-1} \\
+          a_{n1} + a_{1n} & \ldots & a_{n-1n} + a_{nn-1} & a_{nn} + a_{nn}
+          \end{array}
+          \right) = B とおく。\nonumber\\
+        & B^{T} = \left(
+          \begin{array}{cccc}
+          a_{11} + a_{11} & a_{12} + a_{21} & \ldots & a_{1n} + a_{n1} \\
+          a_{21} + a_{12} & \ddots & \ddots & \vdots \\
+          \vdots & \ddots & \ddots & a_{n-1n} + a_{nn-1} \\
+          a_{n1} + a_{1n} & \ldots & a_{n-1n} + a_{nn-1} & a_{nn} + a_{nn}
+          \end{array}
+          \right)\nonumber\\
+        & \therefore B=B^{T}より、A + A^{T}は対称行列。\nonumber\\
+    \end{aligned}
+  \end{equation}
+  \begin{equation}
+    \begin{aligned}
+        &A - A^{T} = \left(
+          \begin{array}{cccc}
+          a_{11} & a_{12} & \ldots & a_{1n} \\
+          a_{21} & \ddots & \ddots & \vdots \\
+          \vdots & \ddots & \ddots & a_{n-1n} \\
+          a_{n1} & \ldots & a_{nn-1} & a_{nn}
+          \end{array}
+          \right) - 
+          \left(
+          \begin{array}{cccc}
+          a_{11} & a_{21} & \ldots & a_{n1} \\
+          a_{12} & \ddots & \ddots & \vdots \\
+          \vdots & \ddots & \ddots & a_{nn-1} \\
+          a_{1n} & \ldots & a_{n-1n} & a_{nn}
+          \end{array}
+          \right) \nonumber\\
+        &= \left(
+          \begin{array}{cccc}
+          0 & a_{12} - a_{21} & \ldots & a_{1n} - a_{n1} \\
+          a_{21} - a_{12} & \ddots & \ddots & \vdots \\
+          \vdots & \ddots & \ddots & a_{n-1n} - a_{nn-1} \\
+          a_{n1} - a_{1n} & \ldots & a_{n-1n} - a_{nn-1} & 0
+          \end{array}
+          \right) = C とおく。\nonumber\\
+        & -C^{T} = \left(
+          \begin{array}{cccc}
+          0 & a_{12} - a_{21} & \ldots & a_{1n} - a_{n1} \\
+          a_{21} - a_{12} & \ddots & \ddots & \vdots \\
+          \vdots & \ddots & \ddots & a_{n-1n} - a_{nn-1} \\
+          a_{n1} - a_{1n} & \ldots & a_{n-1n} - a_{nn-1} & 0
+          \end{array}
+          \right)\nonumber\\
+        & \therefore C=-C^{T}より、A - A^{T}は交代行列。\nonumber\\
+    \end{aligned}
+  \end{equation}
+  \begin{equation}
+    \begin{aligned}
+        &A = \frac{C + B^{T}}{2} \nonumber\\
+        &= \left(
+          \begin{array}{cccc}
+          0 & a_{12} - a_{21} & \ldots & a_{1n} - a_{n1} \\
+          a_{21} - a_{12} & \ddots & \ddots & \vdots \\
+          \vdots & \ddots & \ddots & a_{n-1n} - a_{nn-1} \\
+          a_{n1} - a_{1n} & \ldots & a_{n-1n} - a_{nn-1} & 0
+          \end{array}
+          \right) \times \frac{1}{2} + \nonumber\\ 
+          &\left(
+            \begin{array}{cccc}
+            a_{11} + a_{11} & a_{12} + a_{21} & \ldots & a_{1n} + a_{n1} \\
+            a_{21} + a_{12} & \ddots & \ddots & \vdots \\
+            \vdots & \ddots & \ddots & a_{n-1n} + a_{nn-1} \\
+            a_{n1} + a_{1n} & \ldots & a_{n-1n} + a_{nn-1} & a_{nn} + a_{nn}
+            \end{array}
+            \right) \times \frac{1}{2} \nonumber\\
+    \end{aligned}
+  \end{equation}
+
+  \textmc{\large 3.(2)\\}
+  \begin{equation}
+    \begin{aligned}
+        &A + A^{T} = \begin{pmatrix} 0 & 2 & 4 \\ 2 & -6 & -4 \\ 4 & -4 & 4 \\ \end{pmatrix} \vspace{3mm} (対称行列) \nonumber\\
+        &A - A^{T} = \begin{pmatrix} 0 & 6 & -6 \\ -6 & 0 & -4 \\ 6 & 4 & 0 \\ \end{pmatrix} \vspace{3mm} (交代行列) \nonumber\\
+        & \frac{(対称行列) + (交代行列)}{2} = \frac{\begin{pmatrix} 0 & 2 & 4 \\ 2 & -6 & -4 \\ 4 & -4 & 4 \\ \end{pmatrix}  + \begin{pmatrix} 0 & 6 & -6 \\ -6 & 0 & -4 \\ 6 & 4 & 0 \\ \end{pmatrix}}{2} = \begin{pmatrix} 0 & 4 & -1 \\ -2 & -3 & -4 \\ 5 & 0 & 2 \\ \end{pmatrix} = A \nonumber\\
+    \end{aligned}
+  \end{equation}
+
+  \textmc{\large 4.\\}
+  \begin{equation}
+    \begin{aligned}
+        &\begin{pmatrix} 0 & -1 \\ 1 & 0 \\ \end{pmatrix}と可換な二次の正方行列を\begin{pmatrix} a & b \\ c & d \\ \end{pmatrix}とおくと、\nonumber\\
+        &\begin{pmatrix} 0 & -1 \\ 1 & 0 \\ \end{pmatrix} \times \begin{pmatrix} a & b \\ c & d \\ \end{pmatrix} = \begin{pmatrix} -c & -d \\ a & b \\ \end{pmatrix} \nonumber\\
+        &\begin{pmatrix} a & b \\ c & d \\ \end{pmatrix} \times \begin{pmatrix} 0 & -1 \\ 1 & 0 \\ \end{pmatrix} = \begin{pmatrix} b & -a \\ d & -c \\ \end{pmatrix} \nonumber\\
+        &\begin{pmatrix} -c & -d \\ a & b \\ \end{pmatrix} = \begin{pmatrix} b & -a \\ d & -c \\ \end{pmatrix}より、 \nonumber\\
+        & \therefore\begin{pmatrix} a & b \\ -b & a \\ \end{pmatrix}の時に成立。\nonumber\\
+        &また、上記の行列が互いに可換であることを示す。\nonumber\\
+        &\begin{pmatrix} a & b \\ -b & a \\ \end{pmatrix} \times \begin{pmatrix} e & f \\ -f & e \\ \end{pmatrix} = \begin{pmatrix} ae-bf & af+eb \\ -be-af & -bf+ea \\ \end{pmatrix} \nonumber\\
+        &\begin{pmatrix} e & f \\ -f & e \\ \end{pmatrix} \times \begin{pmatrix} a & b \\ -b & a \\ \end{pmatrix} = \begin{pmatrix} ae-bf & af+eb \\ -be-af & -bf+ea \\ \end{pmatrix} \nonumber\\
+        & \therefore \begin{pmatrix} a & b \\ -b & a \\ \end{pmatrix} \times \begin{pmatrix} e & f \\ -f & e \\ \end{pmatrix} = \begin{pmatrix} e & f \\ -f & e \\ \end{pmatrix} \times \begin{pmatrix} a & b \\ -b & a \\ \end{pmatrix} より、互いに可換である。\nonumber\\
+    \end{aligned}
+  \end{equation}
+
+  \newpage
+  \textmc{\large 5.(1)\\}
+  \begin{equation}
+    \begin{aligned}
+        &AB \times (左辺)= AB \times (AB)^{-1} = E (単位ベクトル)\nonumber\\
+        &AB \times (右辺) = AB \times B^{-1} \times A^{-1} \nonumber\\
+        &=A \times (B \times B^{-1}) \times A^{-1} \nonumber\\
+        &=A \times E \times A^{-1} = A \times A^{-1} = E (単位ベクトル) \nonumber\\
+        & \therefore (AB)^{-1} = A^{-1} \times B^{-1}\nonumber\\
+    \end{aligned}
+  \end{equation}
+
+  \textmc{\large 5.(2)\\}
+  \begin{equation}
+    \begin{aligned}
+        &Aが零因子であると仮定すると、A \times X = 0 となるようなXが存在する。\nonumber\\
+        &A \times X = 0の両辺にA^{-1}をかける。\nonumber\\
+        &A^{-1} \times A \times X =A^{-1} \times 0 \nonumber\\
+        &X=0 \nonumber\\
+        &Aが零因子の場合は、X \neq 0でなければいけないので、X=0はこれに反する。\nonumber\\
+        &X \times A = 0も同様に、X=0となる。\nonumber\\
+        &\therefore Aは零因子ではない。\nonumber\\
+    \end{aligned}
+  \end{equation}
+
+\end{document}

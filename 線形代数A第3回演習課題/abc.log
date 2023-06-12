@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.141592653-p4.1.0-u1.29-230214-2.6 (utf8.uptex) (TeX Live 2023) (preloaded format=uplatex 2023.4.20)  12 JUN 2023 15:19
+This is e-upTeX, Version 3.141592653-p4.1.0-u1.29-230214-2.6 (utf8.uptex) (TeX Live 2023) (preloaded format=uplatex 2023.4.20)  12 JUN 2023 16:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -319,21 +319,16 @@ LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
 
 ]
 LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
-(Font)              scaled to size 6.47278pt on input line 27.
+(Font)              scaled to size 6.47278pt on input line 23.
 LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
-(Font)              scaled to size 4.62341pt on input line 27.
+(Font)              scaled to size 4.62341pt on input line 23.
 LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
-(Font)              scaled to size 9.24683pt on input line 27.
+(Font)              scaled to size 9.24683pt on input line 23.
 LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
-(Font)              scaled to size 6.47278pt on input line 27.
+(Font)              scaled to size 6.47278pt on input line 23.
 LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
-(Font)              scaled to size 4.62341pt on input line 27.
-
-Overfull \hbox (35.28883pt too wide) detected at line 75
-[][][]
- []
-
-[1] [2] [3] (./abc.aux)
+(Font)              scaled to size 4.62341pt on input line 23.
+ [1] [2] [3] [4] (./abc.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 5.12pt have occurred.
@@ -342,10 +337,10 @@ LaTeX Font Warning: Size substitutions with differences
 Here is how much of TeX's memory you used:
  3195 strings out of 476677
  48292 string characters out of 5808165
- 1867484 words of memory out of 5000000
+ 1883484 words of memory out of 5000000
  23641 multiletter control sequences out of 15000+600000
  538530 words of font info for 147 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
- 59i,13n,63p,214b,294s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 59i,15n,63p,345b,294s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on abc.dvi (4 pages, 9288 bytes).
+Output written on abc.dvi (5 pages, 16544 bytes).
