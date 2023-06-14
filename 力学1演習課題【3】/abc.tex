@@ -6,6 +6,10 @@
 }
 \date{2023/6/12}
 
+\usepackage{amsmath,amssymb}
+\usepackage{bm}
+\usepackage{mathtools}
+
 \begin{document}
   \begin{titlepage}
     \maketitle
@@ -14,5 +18,166 @@
     \end{center}
     \thispagestyle{empty}
   \end{titlepage}
+
+  \centerline{\huge 3-2章\\}
+  \vspace{10mm}
+  \textmc{\large (1)\\}
+  \begin{equation}
+    \begin{aligned}
+        &鉛直上向きをy軸の正方向、{v}_{o}ベクトルの方向をx軸の正の方向とする。\nonumber\\
+        &\bm{F} = \begin{pmatrix} x \\ y \end{pmatrix} = \begin{pmatrix} -\gamma {v}_{x} \\ -mg -\gamma {v}_{y} \end{pmatrix}\nonumber\\
+    \end{aligned}
+  \end{equation}
+
+  \textmc{\large (2)\\}
+  \begin{equation}
+    \begin{aligned}
+        &まずは、y成分について解く。\nonumber\\
+        &m \frac{d{v}_{y}}{dt} = -(mg + \gamma {v}_{y}) \cdots ① \nonumber\\
+        &g + \frac{\gamma {v}_{y}}{dt} = \eta とおく。これをtで微分\nonumber\\
+        &\frac{d{v}_{y}}{dt} = \frac{m}{\gamma} \times \frac{d\eta}{dt} \cdots ②\nonumber\\
+        &②を①に代入\nonumber\\
+        &\frac{m}{\gamma} \times \frac{d\eta}{dt} = -\eta\nonumber\\
+        &g + \frac{\gamma {v}_{y}}{m} = e^{-\frac{\gamma}{m}t - {C}_{1}} \hspace{3mm} (積分定数を{C}_{1}とおく。) \nonumber\\
+        &y成分のt=0の時は、{v}_{y} = 0より、\nonumber\\
+        &g + \frac{\gamma}{m} \times 0 = e^{-{C}_{1}}\nonumber\\
+        &-\log g = {C}_{1}\nonumber\\
+        &\therefore {v}_{y} = \frac{m}{\gamma} \left( e^{-\frac{\gamma}{m}t + \log g} -g \right)\nonumber\\
+    \end{aligned}
+  \end{equation}
+  \begin{equation}
+    \begin{aligned}
+      &次に、x成分について解く。\nonumber\\
+      &m\frac{dv}{dt} = - \gamma v\nonumber\\
+      &\int \frac{1}{v} dv = -\int \frac{\gamma}{m} dt\nonumber\\
+      &\log |v| + {C}_{1} = -\frac{\gamma}{m}t + {C}_{2} \hspace{3mm} (積分定数を{C}_{1}、{C}_{2}とおく。)\nonumber\\
+      &v = e^{-\frac{\gamma}{m}t + {C}_{3}} \hspace{3mm} ({C}_{3}={C}_{2} - {C}_{1})\nonumber\\
+      &t=0のとき、{v}_{x} = {v}_{o}より、\nonumber\\
+      &\therefore {v}_{x} = e^{-\frac{\gamma}{m}t + \log {v}_{o}}
+    \end{aligned}
+  \end{equation}
+
+  \begin{equation}
+    \begin{aligned}
+      &\therefore v=\begin{pmatrix} {v}_{x} \\ {v}_{y} \end{pmatrix} = \begin{pmatrix} e^{-\frac{\gamma}{m}t + \log {v}_{o}} \\ \frac{m}{\gamma} \left( e^{-\frac{\gamma}{m}t + \log g} -g \right) \end{pmatrix} \nonumber\\
+    \end{aligned}
+  \end{equation}
+
+  \newpage
+  \textmc{\large (3)\\}
+  \begin{equation}
+    \begin{aligned}
+      &y = \frac{m}{\gamma}\left( -\frac{m}{\gamma}e^{-\frac{\gamma}{m}t + \log g} -gt \right) + \frac{mg}{\gamma}\nonumber\\
+      &x = -{m}{\gamma}e^{-\frac{\gamma}{m}t + \log {v}_{o}} + \frac{m{v}_{o}}{\gamma}\nonumber\\
+      &\therefore z = \begin{pmatrix} y \\ x \end{pmatrix} = \begin{pmatrix} \frac{m}{\gamma}\left( -\frac{m}{\gamma}e^{-\frac{\gamma}{m}t + \log g} -gt \right) + \frac{mg}{\gamma} \\  -{m}{\gamma}e^{-\frac{\gamma}{m}t + \log {v}_{o}} + \frac{m{v}_{o}}{\gamma} \end{pmatrix}\nonumber\\
+    \end{aligned}
+  \end{equation}
+
+  \textmc{\large (4)\\}
+  \begin{equation}
+    \begin{aligned}
+      &{v}_{y} = \frac{m}{\gamma} \left\{ \left( 1-\frac{\gamma}{m}t \right)g - g \right\}\nonumber\\
+      &= -gt\nonumber\\
+      &{v}_{x} = \left( 1-\frac{\gamma}{m}t \right){v}_{o}\nonumber\\
+      &y=\frac{mg}{\gamma}\left( 1- \frac{m}{\gamma} \right)\nonumber\\
+      &x={v}_{o}t\nonumber\\
+      &\therefore v(t)=\begin{pmatrix} {v}_{x} \\ {v}_{y} \end{pmatrix} = \begin{pmatrix} \left( 1-\frac{\gamma}{m}t \right){v}_{o} \\ -gt \end{pmatrix}\nonumber\\
+      &\therefore z(t)=\begin{pmatrix} x \\ y \end{pmatrix} = \begin{pmatrix} {v}_{o}t \\ \frac{mg}{\gamma}\left( 1- \frac{m}{\gamma} \right) \end{pmatrix}\nonumber\\
+    \end{aligned}
+  \end{equation}
+
+  \textmc{\large (5)\\}
+  \begin{equation}
+    \begin{aligned}
+      &十分時間が経過した時、e^{-\frac{\gamma}{m}t} = 0 とおける。\nonumber\\
+      &\therefore v(t)=\begin{pmatrix} {v}_{x} \\ {v}_{y} \end{pmatrix} = \begin{pmatrix} 0 \\ -\frac{mg}{\gamma} \end{pmatrix}\nonumber\\
+      &\therefore z(t)=\begin{pmatrix} x \\ y \end{pmatrix} = z(t)=\begin{pmatrix} \frac{m{v}_{o}}{\gamma} \\ \frac{mg}{\gamma}(1-t) \end{pmatrix}
+    \end{aligned}
+  \end{equation}
+
+  \newpage
+  \centerline{\huge 4-1章\\}
+  \vspace{10mm}
+  \textmc{\large A.(1)\\}
+  \begin{equation}
+    \begin{aligned}
+        &\bm{r}(t) = r(\sin \omega t + \cos \omega t)より、\nonumber\\
+        &\bm{r}(t) = \begin{pmatrix} x \\ y \\ \end{pmatrix} = \begin{pmatrix} r \cos \omega t \\ r \sin \omega t \\ \end{pmatrix} \hspace{3mm} (成分表示)\nonumber\\
+        &\bm{r}(t) = r(\bm{e}_{x}\cos \omega t + \bm{e}_{y} \sin \omega t) \hspace{3mm} (ベクトル表示) \nonumber\\
+    \end{aligned}
+  \end{equation}
+
+  \textmc{\large A.(2)\\}
+  \begin{equation}
+    \begin{aligned}
+        &\frac{d \bm{r}(t)}{dt} = \bm{v}(t) = r(\omega \cos \omega t - \omega \sin \omega t) より、\nonumber\\
+        &\bm{v}(t) = \begin{pmatrix} x \\ y \end{pmatrix} = \begin{pmatrix} -\omega \sin \omega t \\ \omega \cos \omega t \end{pmatrix} \hspace{3mm} (成分表示) \nonumber\\
+        &\bm{v}(t) = r\omega(-\bm{e}_{x} \sin \omega t + \bm{e}_{y} \cos \omega t) \hspace{3mm} (ベクトル表示) \nonumber\\
+    \end{aligned}
+  \end{equation}
+
+  \textmc{\large A.(3)\\}
+  \begin{equation}
+    \begin{aligned}
+        &\frac{d \bm{v}(t)}{dt} = \bm{a}(t) = r(-\omega^2 \sin \omega t - \omega^2 \cos \omega t) より、\nonumber\\
+        &\bm{a}(t) = \begin{pmatrix} x \\ y \end{pmatrix} = \begin{pmatrix} -r\omega^2 \cos \omega t \\ -r\omega^2 \sin \omega t \end{pmatrix} \hspace{3mm} (成分表示) \nonumber\\
+        &\bm{a}(t) = -r\omega^2(-\bm{e}_{x} \cos \omega t + \bm{e}_{y} \sin \omega t) \hspace{3mm} (ベクトル表示) \nonumber\\
+    \end{aligned}
+  \end{equation}
+
+  \textmc{\large A.(4)\\}
+  \begin{equation}
+    \begin{aligned}
+        &\bm{v}(t) \cdot \bm{r}(t) &= r^2\omega(\sin \omega t \cos \omega t -\cos \omega t \sin \omega t)=0\nonumber\\
+        &\therefore \bm{v}(t)は\bm{r}(t)に対して、垂直な方向を向いている。\nonumber\\
+    \end{aligned}
+  \end{equation}
+
+  \textmc{\large A.(5)\\}
+  \begin{equation}
+    \begin{aligned}
+        &\bm{a}(t) = -\omega^2 \bm{r}(t)\nonumber\\
+        &\therefore \bm{a}(t)は\bm{r}(t)に対して、反対の方向を向いている。\nonumber\\
+    \end{aligned}
+  \end{equation}
+
+  \textmc{\large A.(6)\\}
+  \begin{equation}
+    \begin{aligned}
+        &運動方程式に、A.(4)で求めた加速度をな代入する。\nonumber\\
+        &\bm{F}=-mr\omega^2(\bm{e}_{x}\cos \omega t + \bm{e}_{y}\sin \omega t)\nonumber\\
+        &\therefore 力の大きさは、mr\omega^2 である。\nonumber\\
+        &また、力の向きは、\nonumber\\
+        &\bm{F} \cdot \bm{v}(t) = mr^2\omega^3(\bm{e}_{x}\cos \omega t \sin \omega t - \bm{e}_{y}\sin \omega t \cos\omega t)=0\nonumber\\
+        &\bm{F}=-m\omega^2\bm{r}(t)より、\nonumber\\
+        &\therefore 速さのベクトルとは垂直の関係、位置ベクトルとは反対向きの関係である。\nonumber\\
+    \end{aligned}
+  \end{equation}
+
+  \textmc{\large B.(7)\\}
+  \begin{equation}
+    \begin{aligned}
+        &大きさがrで、\bm{e}_{r}ベクトルの方向のベクトル。\nonumber\\
+    \end{aligned}
+  \end{equation}
+
+  \textmc{\large B.(8)\\}
+  \begin{equation}
+    \begin{aligned}
+        &\frac{d\bm{r}(t)}{dt} = \bm{v}(t) = \frac{dr}{dt}\bm{e}_{r} + r \times \frac{d\bm{e}_{r}}{dt}\nonumber\\
+        &=r \times  \frac{d\bm{e}_{r}}{dt}\nonumber\\
+        &=r\omega \bm{e}{\theta}\nonumber\\
+        &大きさがr\omega で、方位角ベクトル\bm{e}_{\theta}の方向。\nonumber\\
+    \end{aligned}
+  \end{equation}
+
+  \textmc{\large B.(9)\\}
+  \begin{equation}
+    \begin{aligned}
+        &\frac{d\bm{v}(t)}{dt} = \bm{a}(t) = \frac{dr}{dt}\omega\bm{e}_{\theta} + \frac{d\omega}{dt} \times r\bm{e}_{\theta} + r\omega \times \frac{d\bm{e}_{\theta}}{dt}\nonumber\\
+        &=0 + 0 -r\omega^2\bm{e}_{r} = -r\omega^2\bm{e}_{r}\nonumber\\
+        &大きさがr\omega^2 で、動径ベクトル\bm{e}_{r}の反対方向。\nonumber\\
+    \end{aligned}
+  \end{equation}
 
 \end{document}
