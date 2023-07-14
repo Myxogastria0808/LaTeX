@@ -1,0 +1,121 @@
+\documentclass[dvipdfmx,uplatex]{jsarticle}
+\title{線形代数A第4回演習課題}
+\author{
+    名前: 長田悠生\\
+    学籍番号: 202310330\\
+    }
+\date{2023/6/21}
+
+\usepackage{amsmath,amssymb}
+\usepackage{bm}
+\usepackage{mathtools}
+
+\begin{document}
+  \begin{titlepage}
+    \maketitle
+    \begin{center}
+      \textmc{\HUGE \LaTeX}
+    \end{center}
+    \thispagestyle{empty}
+  \end{titlepage}
+
+  \textmc{\large 1.(1)\\}
+  \begin{equation}
+    \begin{aligned}
+        &(左辺)=(E-A)(E+A)^{-1}=E(E-A)(E+A)^{-1}\nonumber\\
+        &=(E+A)^{-1}(E+A)(E-A)(E+A)^{-1}\nonumber\\
+        &=(E+A)^{-1}(E^2-A^2)(E+A)^{-1}\nonumber\\
+        &(E+A)^{-1}(E-A)(E+A)(E+A)^{-1}\nonumber\\
+        &(E+A)^{-1}(E-A)=(右辺) \hspace{3mm}\square\nonumber\\
+    \end{aligned}
+  \end{equation}
+
+  \textmc{\large 1.(2)\\}
+  \begin{equation}
+    \begin{aligned}
+        &(E+A)^{T}X=X(E+A)^{T}=EとなるXについて考える。\nonumber\\
+        &E+Aが正則より、\nonumber\\
+        &X=((E+A)^{T})^{-1}は存在する。\nonumber\\
+        &\therefore (E+A)^{T}は正則\nonumber\\
+    \end{aligned}
+  \end{equation}
+
+  \textmc{\large 1.(3)\\}
+  \begin{equation}
+    \begin{aligned}
+        &A=-A^{T}を使う。\nonumber\\
+        &(E-A)(E+A)^{-1} \left\{ (E-A)(E+A)^{-1} \right\}^{T} = (E-A)(E+A)^{-1}(E-A^{T})(E+A^{T})^{-1}\nonumber\\
+        &=(E+A^{T})(E-A^{T})^{-1}(E-A^{T})(E+A^{T})^{-1}\nonumber\\
+        &=\left\{ (E+A)(E-A)^{-1}(E-A)(E+A)^{-1} \right\}^{T}\nonumber\\
+        &=\left\{ (E+A)(E+A^{T})^{-1}(E+A^{T})(E+A)^{-1} \right\}^{T}\nonumber\\
+        &=E \hspace{3mm}\square\nonumber\\
+    \end{aligned}
+  \end{equation}
+
+  \textmc{\large 1.(4)\\}
+  \begin{equation}
+    \begin{aligned}
+        &\left\{ (E-A^{T})(E+A^{T})^{-1} \right\}^{T} = (E-A^{T})(E+A^{T})^{-1}\nonumber\\
+        &=(E-A^{-1})(E+A^{-1})^{-1}\nonumber\\
+        &=(E-A^{-1})AA^{-1}(E+A^{-1})^{-1}\nonumber\\
+        &=(A-E)(E+A)^{-1}\nonumber\\
+        &=-(E-A)(E+A)^{-1} \hspace{3mm}\square\nonumber\\
+    \end{aligned}
+  \end{equation}
+
+  \textmc{\large 2.(1)\\}
+  \begin{equation}
+    \begin{aligned}
+        &A^{-1} = \frac{1}{ad-bc}\begin{pmatrix} d & -b\\ -c & a\\ \end{pmatrix}より、\\
+        &\begin{pmatrix} 1 & -3\\ 2 & a\\ \end{pmatrix} \begin{pmatrix} \frac{a}{a+6} & \frac{3}{a+6}\\ \frac{-2}{a+6} & \frac{1}{a+6}\\ \end{pmatrix} = Eとなり、\nonumber\\
+        &\begin{pmatrix} a+1 & 2\\ 5 & a+4\\ \end{pmatrix} \begin{pmatrix} \frac{a+4}{(a+1)(a+4)-10} & \frac{-2}{(a+1)(a+4)-10}\\ \frac{-5}{(a+1)(a+4)-10} & \frac{a+1}{(a+1)(a+4)-10}\\ \end{pmatrix} \neq Eとなるようなaを探せばよい。\nonumber\\
+        &a \neq -6 かつ a = 1か-6であればよいので、\nonumber\\
+        &\therefore a=1\nonumber\\
+    \end{aligned}
+  \end{equation}
+
+  \textmc{\large 2.(2)\\}
+  \begin{equation}
+    \begin{aligned}
+        &AX=\begin{pmatrix} 1 & -1 & 2\\ 0  & 1 & 3\\ 0 & 0 & 1\\ \end{pmatrix} \begin{pmatrix} x_{11} & x_{12} & x_{13}\\ x_{21}  & x_{22} & x_{23}\\ x_{31} & x_{32} & x_{33}\\ \end{pmatrix} = \begin{pmatrix} 1 & 0 & 0\\ 0  & 1 & 0\\ 0 & 0 & 1\\ \end{pmatrix}\nonumber\\
+        &計算すると、X=\begin{pmatrix} 1 & 1 & -5\\ 0  & 1 & -3\\ 0 & 0 & 1\\ \end{pmatrix}\nonumber\\
+        &XA=\begin{pmatrix} x_{11} & x_{12} & x_{13}\\ x_{21}  & x_{22} & x_{23}\\ x_{31} & x_{32} & x_{33}\\ \end{pmatrix} \begin{pmatrix} 1 & -1 & 2\\ 0  & 1 & 3\\ 0 & 0 & 1\\ \end{pmatrix} = \begin{pmatrix} 1 & 0 & 0\\ 0  & 1 & 0\\ 0 & 0 & 1\\ \end{pmatrix}\nonumber\\
+        &\therefore X=\begin{pmatrix} 1 & 1 & -5\\ 0  & 1 & -3\\ 0 & 0 & 1\\ \end{pmatrix}\nonumber\\
+    \end{aligned}
+  \end{equation}
+
+  \textmc{\large 3.1\\}
+  \begin{equation}
+    \begin{aligned}
+        &f(\bm{x})=\begin{pmatrix} 2\\ -1 \end{pmatrix} = f(\bm{e_{1}}) + f(\bm{e_{3}})\nonumber\\
+        &f(\bm{x})=\begin{pmatrix} 1\\ 2 \end{pmatrix} = f(\bm{e_{2}}) + f(\bm{e_{3}})\nonumber\\
+        &f(\bm{x})=\begin{pmatrix} 4\\ -6 \end{pmatrix} = 2f(\bm{e_{3}})\nonumber\\
+        &したがって、A=\left( f(\bm{e_{1}}) f(\bm{e_{2}}) f(\bm{e_{3}}) \right) = \begin{pmatrix} 0 & -1 & 2\\ 2 & 5 & -3\\ \end{pmatrix}\nonumber\\
+    \end{aligned}
+  \end{equation}
+
+  \newpage
+  \textmc{\large 4.\\}
+  \begin{equation}
+    \begin{aligned}
+        &T_{A}(\bm{e_{j}}) = A\bm{e_{j}} \hspace{3mm}(1 \leq j \leq n)である。\nonumber\\
+        &また、T_{A^n}(\bm{e_{j}})=A^{n}\bm{e_{j}}である。\nonumber\\
+        &\bm{e_{j}}とT_{A}の具体的な関係についてみる。\nonumber\\
+        &n=3のとき、\nonumber\\
+        &A= \begin{pmatrix} 0 & 1 & 0\\ 0 & 1 & 0 \\ a & 0 & 0 \\ \end{pmatrix}\nonumber\\
+        &T_{A}(\bm{e_{1}})=A{\bm{e_{1}}} = \begin{pmatrix} 0\\ 0\\ a\\ \end{pmatrix} = a\bm{e_{3}}\nonumber\\
+        &T_{A}(\bm{e_{2}})=A{\bm{e_{2}}} = \begin{pmatrix} 1\\ 0\\ 0\\ \end{pmatrix} = \bm{e_{1}}\nonumber\\
+        &T_{A}(\bm{e_{3}})=A{\bm{e_{3}}} = \begin{pmatrix} 0\\ 1\\ 0\\ \end{pmatrix} = \bm{e_{2}}\nonumber\\
+        &ここまでの結果で、以下のことが推測できる。\nonumber\\
+        &T_{A}(\bm{e_{j}})=\bm{e_{j-1}} \hspace{2mm} (2 \leq j)、T_{A}(\bm{e}_{1}) = a\bm{e_{n}} \hspace{2mm} (1=j)\nonumber\\
+        &また、合成について、T_{A}(\bm{e_{3}})の場合を例にすると、\nonumber\\
+        &T_{A}\left( T_{A}\left( T_{A}(\bm{e_{3}}) \right) \right) = a\bm{e_{3}}\nonumber\\
+        &ここで、以下のことが推測できる。\nonumber\\
+        &T_{A^n}(\bm{e_{j}})=a\bm{e}_{j}\nonumber\\
+        &T_{A^n}(\bm{e_{j}})=A^n\bm{e_{j}} = a\bm{e_{j}}\nonumber\\
+        &ここでaはスカラーであり、A^nは、n次正方行列である。\nonumber\\
+        &\therefore A^n = aE_{n}
+      \end{aligned}
+  \end{equation}
+
+\end{document}

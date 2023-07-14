@@ -1,0 +1,222 @@
+\documentclass[dvipdfmx,uplatex]{jsarticle}
+\title{}
+\author{線形代数A第7回演習課題}
+\date{2023/7/12}
+
+\usepackage{amsmath,amssymb}
+\usepackage{bm}
+\usepackage{mathtools}
+
+\begin{document}
+  \begin{titlepage}
+    \maketitle
+    \begin{center}
+      \textmc{\HUGE \LaTeX}
+    \end{center}
+    \thispagestyle{empty}
+  \end{titlepage}
+
+  \textmc{\large 1.\\}
+  \begin{equation}
+    \begin{aligned}
+        (1)\hspace{3mm}
+        \left(
+            \begin{array}{cccc|c} 
+                1 & 2 & 0  & -1 & -1 \\
+                -1 & 1 & 2 & 0 & 3 \\
+                2 & 0 & 1 & 1 & 8 \\
+                1 & -2 & -1  & 1 & 2 \\
+            \end{array} 
+        \right) \hspace{1mm} \to
+        \left(\renewcommand{\arraystretch}{1.5}
+            \begin{array}{cccc|c} 
+                1 & 0 & 0  & 0 & \frac{86}{33} \\
+                0 & 1 & 0 & 0 & -\frac{7}{3} \\
+                0 & 0 & 1 & 0 & 3 \\
+                0 & 0 & 0 & 1 & 1 \\
+            \end{array} 
+        \right)\nonumber\\
+        \\
+        \therefore x=\frac{86}{33}、y=-\frac{7}{3}、z=3、w=1 \nonumber\\
+      \end{aligned}
+  \end{equation}
+
+  \begin{equation}
+    \begin{aligned}
+        (2)\hspace{3mm}
+        \left(
+            \begin{array}{cccc|c} 
+                1 & 2 & 4  & -6 & -7 \\
+                3 & 1 & 7 & 7 & 9 \\
+                1 & 9 & 11 & 19 & 11 \\
+                2 & 7 & 11 & 5 & t \\
+            \end{array} 
+        \right) \hspace{1mm} \to
+        \left(
+            \begin{array}{cccc|c} 
+                1 & 0 & 2 & 0 & -3 \\
+                0 & 1 & 1 & 0 & -11 \\
+                0 & 0 & 0 & 1 & 1 \\
+                0 & 0 & 0 & 0 & t \\
+            \end{array} 
+        \right) \nonumber\\
+        \\
+        \therefore x+2y=-3、y+z=-11、w=1 \hspace{2mm}(t=0) \nonumber\\
+      \end{aligned}
+  \end{equation}
+
+  \begin{equation}
+    \begin{aligned}
+        (3)\hspace{3mm}
+        \left(
+            \begin{array}{cccc|c} 
+                1 & 2 & 3  & 1 & 1 \\
+                2 & 5 & 8 & 3 & 3 \\
+                1 & 3 & 5 & 2 & t+3 \\
+                4 & 3 & 2 & t & t \\
+            \end{array} 
+        \right) \hspace{1mm} \to
+        \left(
+            \begin{array}{cccc|c} 
+                1 & 0 & -1 & 0 & 0 \\
+                0 & 1 & 2 & 0 & 0 \\
+                0 & 0 & 0 & 1 & 0 \\
+                0 & 0 & 0 & 0 & 1 \\
+            \end{array} 
+        \right) \nonumber\\
+        \\
+        \therefore x-z=0、y+z=0、w=0 \hspace{2mm}(t=0,-1) \nonumber\\
+      \end{aligned}
+  \end{equation}
+
+
+  \textmc{\large 2.\\}
+  \begin{equation}
+    \begin{aligned}
+        (1)\hspace{3mm}
+        \left(
+            \begin{array}{ccc|ccc} 
+                1 & 2 & -1 & 1 & 0 & 0\\
+                3 & 1 & 0 & 0 & 1 & 0\\
+                2 & -2 & 1 & 0 & 0 & 1\\
+            \end{array} 
+        \right) \hspace{1mm} \to
+        \left(
+            \begin{array}{ccc|ccc} 
+                1 & 0 & 0 & \frac{1}{3} & 0 & 1 \\
+                0 & 1 & 0 & 1 & 1 & -1 \\
+                0 & 0 & 1 & -\frac{8}{3} & 2 & -\frac{5}{3} \\
+            \end{array} 
+        \right) \nonumber\\
+        \\
+        \therefore \left(
+            \begin{array}{ccc} 
+                \frac{1}{3} & 0 & 1 \\
+                1 & 1 & -1 \\
+                -\frac{8}{3} & 2 & -\frac{5}{3} \\
+            \end{array} 
+        \right)
+    \end{aligned}
+  \end{equation}
+
+  \begin{equation}
+    \begin{aligned}
+        (2)\hspace{3mm}
+        \left(
+            \begin{array}{ccc|ccc} 
+                4 & 1 & 2 & 1 & 0 & 0 \\
+                3 & 2 & -1 & 0 & 1 & 0 \\
+                -2 & -2 & 2 & 0 & 0 & 1 \\
+            \end{array}
+        \right) \hspace{1mm} \to
+        \left(
+            \begin{array}{ccc|ccc}
+                1 & 0 & 0 & 0 & \frac{1}{2} & \frac{1}{4} \\
+                0 & 1 & 0 & \frac{1}{3} & -1 & 1 \\
+                0 & 0 & 1 & \frac{1}{3} & -\frac{1}{2} & -\frac{1}{12} \\
+            \end{array} 
+        \right) \nonumber\\
+        \\
+        \therefore \left(
+            \begin{array}{ccc}
+                0 & \frac{1}{2} & \frac{1}{4} \\
+                \frac{1}{3} & -1 & 1 \\
+                \frac{1}{3} & -\frac{1}{2} & -\frac{1}{12} \\
+            \end{array} 
+        \right)
+    \end{aligned}
+  \end{equation}
+
+  \begin{equation}
+    \begin{aligned}
+        (3)\hspace{3mm}
+        \left(
+            \begin{array}{ccc|ccc} 
+                4 & 1 & 2 & 1 & 0 & 0 \\
+                3 & 2 & -1 & 0 & 1 & 0 \\
+                -2 & -2 & 2 & 0 & 0 & 1 \\
+            \end{array}
+        \right) \hspace{1mm} \to
+        \left(
+            \begin{array}{ccc|ccc}
+                1 & 0 & 0 & 0 & \frac{1}{2} & \frac{1}{4} \\
+                0 & 1 & 0 & \frac{1}{3} & -1 & 1 \\
+                0 & 0 & 1 & \frac{1}{3} & -\frac{1}{2} & -\frac{1}{12} \\
+            \end{array} 
+        \right) \nonumber\\
+        \\
+        \therefore \left(
+            \begin{array}{ccc}
+                0 & \frac{1}{2} & \frac{1}{4} \\
+                \frac{1}{3} & -1 & 1 \\
+                \frac{1}{3} & -\frac{1}{2} & -\frac{1}{12} \\
+            \end{array} 
+        \right)
+    \end{aligned}
+  \end{equation}
+
+  \newpage
+  \textmc{\large 3.\\}
+  \begin{equation}
+    \begin{aligned}
+        拡大係数行列にすると以下のようになる\\
+        \left(
+            \begin{array}{ccc|c} 
+                1 & k+1 & 2k & k+1\\
+                k-1 & 3k-1 & k & k-1\\
+                2k-1 & 7k-1 & 3k & 3k-1\\
+            \end{array}
+        \right) \hspace{1mm} \to
+        \left(\renewcommand{\arraystretch}{1.5}
+            \begin{array}{ccc|c}
+                1 & 0 & 0 & \frac{2k+2}{k+3}\\
+                0 & 1 & 0 & \frac{1-k}{k+3}\\
+                0 & 0 & 1 & 0\\
+            \end{array} 
+        \right) \hspace{3mm}(k \neq 0,3) \nonumber\\
+        \\
+        \therefore x=\frac{2k-12}{3-k}、y=\frac{1-k}{3-k}、z=0のときに1組の解を持つ。\nonumber\\
+        (i) k=0のとき、\\
+        \left\{\begin{matrix}
+            x + y = 1\\
+            -x-y = -1 となる。\\
+            -x-y = -1\\
+        \end{matrix}\right. 
+        よって、パラメータt,sを用いて、\\
+        x=t、y=1-t、z=sと表せる。\\
+        \therefore 解が2つ以上ある。\\
+        (ii)k=3のとき、\\
+        \left\{\begin{matrix}
+            x + 4y + 6z = 4\\
+            2x + 8y + 3z = 2 となる。\\
+            5x + 20y + 2z = 8\\
+        \end{matrix}\right.
+        ①,②より、z=\frac{2}{3}\\
+        ①,③より、z=\frac{16}{21}\\
+        ①~③を満たすzは存在しない。\\
+        \therefore 解は存在しない。\\
+        \therefore k=0のとき、(x,y,z)=(t,1-t,s) (s,tはパターン)\\
+    \end{aligned}
+  \end{equation}
+
+\end{document}

@@ -1,0 +1,168 @@
+\documentclass[dvipdfmx,uplatex]{jsarticle}
+\title{力学1演習課題【4】}
+\author{
+    名前: 長田悠生\\
+    学籍番号: 202310330\\
+}
+\date{2023/6/18}
+
+\usepackage{amsmath,amssymb}
+\usepackage{bm}
+\usepackage{mathtools}
+
+\begin{document}
+  \begin{titlepage}
+    \maketitle
+    \begin{center}
+      \textmc{\HUGE \LaTeX}
+    \end{center}
+    \thispagestyle{empty}
+  \end{titlepage}
+
+  \centerline{\LARGE 4-2}
+  \vspace{10mm}
+  \textmc{\large (1)\\}
+  \begin{equation}
+    \begin{aligned}
+        &\bm{F} = - m\omega^2x(t)より、\nonumber\\
+        &\bm{F} = m\frac{d^2}{dt^2}x(t) = -m\omega^2x(t)\nonumber\\
+        &\therefore m\frac{d^2}{dt^2}x(t) + m\omega^2x(t) = 0\nonumber\\
+    \end{aligned}
+  \end{equation}
+
+  \textmc{\large (2-1)\\}
+  \begin{equation}
+    \begin{aligned}
+        &x(t) = e^{\lambda t}\nonumber\\
+        &\therefore \frac{d^2}{dt^2}e^{\lambda t} + \omega^2e^{\lambda t} = 0\nonumber\\
+    \end{aligned}
+  \end{equation}
+
+  \textmc{\large (2-2)\\}
+  \begin{equation}
+    \begin{aligned}
+        &x(t) = e^{\lambda t}\nonumber\\
+        &\frac{d^2}{dt^2}e^{\lambda t} + \omega^2e^{\lambda t} = 0\nonumber\\
+        &\lambda^2e^{\lambda t} + \omega^2e^{\lambda t} = 0\nonumber\\
+        &e^{\lambda t}(\omega^2 + \lambda^2) = 0\nonumber\\
+        &e^{\lambda t} > 0より、\nonumber\\
+        &\lambda^2 = -\omega^2\nonumber\\
+        &\lambda = \pm \omega i\nonumber\\
+        &\therefore {x}_{1}(t) = e^{\omega t i}、{x}_{2}(t) = e^{-\omega t i}\nonumber\\
+    \end{aligned}
+  \end{equation}
+
+  \textmc{\large (2-3)\\}
+  \begin{equation}
+    \begin{aligned}
+        &e^{\omega t i} \times A = e^{-\omega t i} \hspace{3mm} (Aは定数関数)とおくと、\nonumber\\
+        &A=e^{-2\omega t i}\nonumber\\
+        &\therefore Aは定数関数ではないので、x_{1}(t)とx_{2}(t)は一次独立\nonumber\\
+        &\therefore (一般解) x(t) = Ae^{\omega t i} + Be^{-\omega t i}\nonumber\\
+    \end{aligned}
+  \end{equation}
+
+  \textmc{\large (3)\\}
+  \begin{equation}
+    \begin{aligned}
+        &x(t) = Ae^{\omega t i} + Be^{-\omega t i}\nonumber\\
+        &=A(\cos \omega t + i \sin \omega t) + B{\cos(-\omega t) + i \sin (-\omega t)}\nonumber\\
+        &=A(\cos \omega t + i \sin \omega t) + B(\cos \omega t -i \sin \omega t)\nonumber\\
+        &\therefore A(\cos \omega t + i \sin \omega t) + B(\cos \omega t -i \sin \omega t)\nonumber\\
+    \end{aligned}
+  \end{equation}
+
+  \newpage
+  \textmc{\large (4)\\}
+  \begin{equation}
+    \begin{aligned}
+        &x(t) = A(\cos \omega t + i \sin \omega t) + B(\cos \omega t -i \sin \omega t)\nonumber\\
+        &=(A+B)\cos \omega t + i(A-B)\sin \omega t\nonumber\\
+        &t=0のとき、\nonumber\\
+        &x(0)=(A+B)\cos0 + i(A-B)\sin0\nonumber\\
+        &=A+B\nonumber\\
+        &このとき、x(0)=Dより、A+B=Dである。\nonumber\\
+        &v(t)=\frac{d}{dt}x(t) = -\omega(A+B)\sin \omega t + \omega(A-B)i\cos \omega t\nonumber\\
+        &t=0のとき、\nonumber\\
+        &v(0)=-\omega(A+B)\sin0 + \omega(A-B)i\cos0=0\nonumber\\
+        &\omega(A-B)i=0\nonumber\\
+        &\omega \neq 0より、\nonumber\\
+        &A-B=0\nonumber\\
+        &A=B=\frac{1}{2}D\nonumber\\
+        &\therefore x(t) = D\cos\omega t\nonumber\\
+        &おもりの運動は、振幅Dの \cos 波になる。\nonumber\\
+    \end{aligned}
+  \end{equation}
+
+
+  \vspace{5mm}
+  \centerline{\LARGE 4-3}
+  \vspace{5mm}
+  \textmc{\large (1)\\}
+  \begin{equation}
+    \begin{aligned}
+        &\bm{F}=-m\omega^2x(t) -2m\beta\frac{dx(t)}{dt}\nonumber\\
+    \end{aligned}
+  \end{equation}
+
+  \textmc{\large (2)\\}
+  \begin{equation}
+    \begin{aligned}
+        &\omega を全て \beta に置き換える。\nonumber\\
+        &m\frac{d^2x(t)}{dt^2} = -m \beta^2 x(t) -2m\beta \frac{dx(t)}{dt}\nonumber\\
+        &m>0より、\nonumber\\
+        &\frac{d^2x(t)}{dt^2} = - \beta^2 x(t) -2\beta \frac{dx(t)}{dt}\hspace{3mm} \cdots ①\nonumber\\
+        &x(t)=e^{\lambda t}を代入\nonumber\\
+        &\lambda^2e^{\lambda t} = -\beta^2e^{\lambda t} -2\beta\lambda e^{\lambda t}\nonumber\\
+        &e^{\lambda t}>0より、\nonumber\\
+        &\lambda^2 + 2\beta\lambda + \beta^2 = 0\nonumber\\
+        &(\lambda + \beta)^2 = 0\nonumber\\
+        &\lambda + \beta > 0より、\nonumber\\
+        &\lambda + \beta = 0\nonumber\\
+        &\lambda = -\beta \nonumber\\
+        &\therefore x(t) = e^{-\beta t}\nonumber\\
+    \end{aligned}
+  \end{equation}
+
+  \textmc{\large (3)\\}
+  \begin{equation}
+    \begin{aligned}
+        &(2)より、x(t) = Ce^{-\beta t} \hspace{3mm} (Cは定数関数)\nonumber\\
+        &Cをy(t)という関数に置き換えてみる。\nonumber\\
+        &x(t) = y(t)e^{-\beta t}と仮定して、(2)の①の式に代入して解いていく。\nonumber\\
+        &\frac{d^2 \hspace{1mm} y(t)e^{-\beta t}}{dt^2} = -\beta^2y(t)e^{-\beta t} -2\beta\frac{d \hspace{1mm} y(t)e^{-\beta t}}{dt}\nonumber\\
+        &\frac{d^2y(t)}{dt^2}e^{-\beta t} + (\beta^2 -\beta^2)y(t)e^{-\beta t} = 0\nonumber\\
+        &e^{-\beta t} >0より、\nonumber\\
+        &\frac{d^2y(t)}{dt^2}=0\nonumber\\
+        &したがって、y(t)=C_{1}t + C_{2} \hspace{3mm} (C_{1},C_{2} \in \mathbb{R})とおける。\nonumber\\
+        &\therefore x(t) =(C_{1}t + C_{2})e^{-\beta t}\nonumber\\
+        &=C_{1}te^{-\beta t} +C_{2}e^{-\beta t}\nonumber\\
+        &x(t)のもう一つの解は、te^{-\beta t}となる。\nonumber\\
+    \end{aligned}
+  \end{equation}
+
+  \textmc{\large (4)\\}
+  \begin{equation}
+    \begin{aligned}
+        &x(t)=C_{1}te^{-\beta t} +C_{2}e^{-\beta t}\hspace{3mm}(一般解)\nonumber\\
+    \end{aligned}
+  \end{equation}
+
+  \textmc{\large (5)\\}
+  \begin{equation}
+    \begin{aligned}
+        &運動:\hspace{1mm} 臨界減衰\nonumber\\
+        & \omega > \beta の場合よりも、収束するのが早い上に、\omega > \beta の場合と異なり、振動しない。\nonumber\\
+    \end{aligned}
+  \end{equation}
+
+  \textmc{\large (6)\\}
+  \begin{equation}
+    \begin{aligned}
+      &ドアが閉まる際に、ドアの動きが振動しないようにするドアダンパーへの利用。\nonumber\\
+    \end{aligned}
+  \end{equation}
+
+
+
+\end{document}

@@ -1,0 +1,52 @@
+\documentclass[dvipdfmx,uplatex]{jsarticle}
+\title{
+}
+\author{
+    名前: 長田悠生\\
+    学籍番号: 202310330\\
+}
+\date{2023/6/18}
+
+\usepackage{amsmath,amssymb}
+\usepackage{bm}
+\usepackage{mathtools}
+
+\begin{document}
+  \begin{titlepage}
+    \maketitle
+    \begin{center}
+      \textmc{\HUGE \LaTeX}
+    \end{center}
+    \thispagestyle{empty}
+  \end{titlepage}
+
+  \centerline{\huge 演習課題8A}
+  \vspace{10mm}
+  \begin{equation}
+    \begin{aligned}
+        &面積が \pi であるので、面積が1になるように調整する。\nonumber\\
+        &すると、{f}_{X,Y}(x,y) = \frac{1}{\pi}\nonumber\\
+        &f_{Y}(y) = \int_{-\infty}^{\infty} f_{X,Y}(x,y) dx = \int_{-\sqrt{1-y^2}}^{\sqrt{1-y^2}} \frac{1}{\pi} dx = \frac{2}{\pi}\sqrt{1-y^2}\nonumber\\
+        &f_{X|Y}(x|y) = \frac{\frac{1}{\pi}}{\frac{2\sqrt{1-y^2}}{\pi}} = \frac{1}{2\sqrt{1-y^2}}\nonumber\\
+        &\therefore f_{Y}(y) = \frac{2}{\pi}\sqrt{1-y^2}、f_{X|Y}(x|y) = \frac{1}{2\sqrt{1-y^2}}\nonumber\\
+    \end{aligned}
+  \end{equation}
+
+  \vspace{10mm}
+  \centerline{\huge 演習課題8B}
+  \vspace{10mm}
+  \begin{equation}
+    \begin{aligned}
+        &一様分布に従うより、f_{X}(x) = \frac{1}{n}\nonumber\\
+        &E \left[ g(x) \right] = \int_{-\infty}^{\infty} g(x)f_{X}(x) dx より、\nonumber\\
+        &g(x) = |X - m|とおくと、以下のように表せる。\nonumber\\
+        &E \left[ |X - m| \right] = \int_{0}^{n}|X - m|f_{X}(x)dx\nonumber\\
+        &=\frac{m^2}{n} -m + \frac{n}{2}\nonumber\\
+        &f(m)=\frac{m^2}{n} -m + \frac{n}{2}の最小値の際のmの値を求めればいいので、\nonumber\\
+        &=\frac{1}{n} \left( m - \frac{n}{2} \right)^2 + \frac{n}{4}\nonumber\\
+        &m=\frac{n}{2}のとき、最小値が\frac{n}{4}となる。\nonumber\\
+        &\therefore m=\frac{n}{2}のとき、E \left[ |X - m| \right]が最小。\nonumber\\
+    \end{aligned}
+  \end{equation}
+
+\end{document}
